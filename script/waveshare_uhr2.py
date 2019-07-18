@@ -17,15 +17,34 @@ Uhrzeit = datetime.now().strftime('%H:%M')
 
 import thingspeak
 ch = thingspeak.Channel(647418)
-out = ch.get({'results':1})
-outtruncTemp = out[465:470]
-outtruncHumi = out[-60:-56]
-print ('thingspeak: temp '+str(outtruncTemp)+'  humidity: '+str(outtruncHumi))
+outRAW = ch.get({'results':1})
+outSplit = outRAW.split('\"')
+outTemp = outSplit[-18]
+outHumi = outSplit[-14]
+print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 
 font24 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 98)
 font18 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 34)
 font8 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 14)
+# track ID via volumio REST api:
+import subprocess, os
+trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+(outputRAW, error) = trackid.communicate()
+if trackid.returncode != 0:
+  # print('Schlafzimmer aus?')
+   artist = 'off'
+   trackname = 'line'
+   print (str(artist)+str(' - ')+str(trackname))
+else:
+   #print(outputRAW)
+   trackname = outputRAW.decode().split('\"')[9]
+   artist = outputRAW.decode().split('\"')[13]
+   #albumart = outputRAW.decode().split('\"')[21]
+   print (str(artist)+str(' - ')+str(trackname))
+   #print (albumart)
+
+
 def main():
         #Init driver
         epd = epd2in7.EPD()
@@ -42,11 +61,11 @@ def main():
         #draw a rectangle in the center of the screen
         #draw.rectangle((epd2in7.EPD_WIDTH/2-10, epd2in7.EPD_HEIGHT/2-10, epd2in7.EPD_WIDTH/2+10, epd2in7.EPD_HEIGHT/2+10), fill = 0)
 
-        draw.text((42, 0), Datum, font = font18, fill = 0)
-        draw.text((0, 160), 'CPU: ' +str(t) +' °C', font = font8, fill = 0)
-        draw.text((140, 160), str(outtruncTemp) +' °C     ' +str(outtruncHumi) +str(' %'), font = font8, fill = 0)
-
-        draw.text((5, 60), Uhrzeit, font = font24, fill = 0)
+        draw.text((42, 0), Datum, font = font18, fill = 0) #Datm
+        draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
+        draw.text((140, 160), str(outTemp) +' °C     ' +str(outHumi) +str(' %'), font = font8, fill = 0) #Temp+Humidity
+        draw.text((0, 100), str(artist)+str(' - ')+str(trackname)) #volumio zeug
+        draw.text((5, 60), Uhrzeit, font = font24, fill = 0) #Uhrzeit
 
         #Update display
         epd.display(epd.getbuffer(image))
