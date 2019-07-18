@@ -24,8 +24,9 @@ outHumi = outSplit[-14]
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 
-font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 98)
+font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102)
 font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34)
+font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 23)
 font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 14)
 # track ID via volumio REST api:
 import subprocess, os
@@ -61,11 +62,11 @@ def main():
         #draw a rectangle in the center of the screen
         #draw.rectangle((epd2in7.EPD_WIDTH/2-10, epd2in7.EPD_HEIGHT/2-10, epd2in7.EPD_WIDTH/2+10, epd2in7.EPD_HEIGHT/2+10), fill = 0)
 
-        draw.text((42, 0), Datum, font = font18, fill = 0) #Datm
-        draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
-        draw.text((140, 160), str(outTemp) +' °C     ' +str(outHumi) +str(' %'), font = font8, fill = 0) #Temp+Humidity
-        draw.text((0, 100), str(artist)+str(' - ')+str(trackname)) #volumio zeug
-        draw.text((5, 60), Uhrzeit, font = font24, fill = 0) #Uhrzeit
+        draw.text((45, -7), Datum, font = font18, fill = 0) #Datm
+        draw.text((0, 162), str(t) +' °C', font = font8, fill = 0) #CPU temp
+        draw.text((165, 162), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
+        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio zeug
+        draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #Uhrzeit
 
         #Update display
         epd.display(epd.getbuffer(image))
