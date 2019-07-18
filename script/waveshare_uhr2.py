@@ -25,8 +25,8 @@ print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 
 font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 98)
-font18 = ImageFont.truetype('/home/pi/script/lib/waveshareEpaper/Font.ttc', 34)
-font8 = ImageFont.truetype('/home/pi/script/lib/waveshareEpaper/Font.ttc', 14)
+font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34)
+font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 14)
 # track ID via volumio REST api:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
