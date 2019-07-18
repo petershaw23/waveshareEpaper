@@ -7,7 +7,7 @@ f = open("/sys/class/thermal/thermal_zone0/temp", "r")
 traw = f.readline ()
 t = round(float(traw) / 1000)
 import sys
-sys.path.append(r'/home/pi/script/lib')
+sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
 import epd2in7
 import epdconfig
 from PIL import Image,ImageDraw,ImageFont
@@ -24,9 +24,9 @@ outHumi = outSplit[-14]
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 
-font24 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 98)
-font18 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 34)
-font8 = ImageFont.truetype('/home/pi/script/lib/Font.ttc', 14)
+font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 98)
+font18 = ImageFont.truetype('/home/pi/script/lib/waveshareEpaper/Font.ttc', 34)
+font8 = ImageFont.truetype('/home/pi/script/lib/waveshareEpaper/Font.ttc', 14)
 # track ID via volumio REST api:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
