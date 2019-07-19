@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-#uhr v2 by psw
+#uhr v2 by psw - zeigt  Uhrzeit, Datum, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('-----------------------------')
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
