@@ -54,7 +54,7 @@ def main():
         #Init driver
         epd = epd2in7.EPD()
         print(Datum, Uhrzeit)
-        print("init")
+        #print("init")
         epd.init()
 
         # Image with screen size
