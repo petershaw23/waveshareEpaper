@@ -1584,3 +1584,25 @@ e-Paper busy
 e-Paper busy release
 spi end
 close 5V, Module enters 0 power consumption ...
+-----------------------------
+thingspeak: temp 25.5  humidity: 60.2
+off - line
+19.07.2019 11:56
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+thingspeak: temp 25.5  humidity: 60.2
+off - line
+19.07.2019 11:57
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
