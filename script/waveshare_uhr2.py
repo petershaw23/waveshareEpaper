@@ -3,32 +3,36 @@
 #uhr v2 by psw
 print ('-----------------------------')
 import io
-f = open("/sys/class/thermal/thermal_zone0/temp", "r")
+f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
 traw = f.readline ()
 t = round(float(traw) / 1000)
 import sys
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
-import epd2in7
-import epdconfig
+import epd2in7 #lib fuer display
+import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
 from datetime import datetime
 Datum = datetime.now().strftime('%d.%m.%Y')
 Uhrzeit = datetime.now().strftime('%H:%M')
 
-import thingspeak
-ch = thingspeak.Channel(647418)
-outRAW = ch.get({'results':1})
-outSplit = outRAW.split('\"')
-outTemp = outSplit[-18]
-outHumi = outSplit[-14]
+import thingspeak #temperatur und humidity von thingspeak channel holen
+try:
+    ch = thingspeak.Channel(647418)
+    outRAW = ch.get({'results':1})
+    outSplit = outRAW.split('\"')
+    outTemp = outSplit[-18]
+    outHumi = outSplit[-14]
+except: #falls offline
+    outTemp = '??'
+    outHumi = '??'
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
-
+#schriftarten definieren
 font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102)
 font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34)
 font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 23)
 font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 14)
-# track ID via volumio REST api:
+# track ID via volumio REST api holen:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 (outputRAW, error) = trackid.communicate()
