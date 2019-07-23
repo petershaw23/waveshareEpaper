@@ -12,10 +12,16 @@ import epd2in7 #lib fuer display
 import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
 from datetime import datetime
-Datum = datetime.now().strftime('%d.%m.%Y')
+Datum = datetime.now().strftime('%d.%m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 
 import thingspeak #temperatur und humidity von thingspeak channel holen
+try:
+    import gcallite
+    geb = gcallite.heuteGeb[1]
+    print('Output: '+str(geb))
+except:
+    print ('failed to import gcallite')
 try:
     ch = thingspeak.Channel(647418)
     outRAW = ch.get({'results':1})
@@ -67,6 +73,7 @@ def main():
         #draw.rectangle((epd2in7.EPD_WIDTH/2-10, epd2in7.EPD_HEIGHT/2-10, epd2in7.EPD_WIDTH/2+10, epd2in7.EPD_HEIGHT/2+10), fill = 0)
 
         draw.text((45, -7), Datum, font = font18, fill = 0) #Datm
+        draw.text((130, -7), geb, font = font18, fill = 0)
         draw.text((0, 162), str(t) +' °C', font = font8, fill = 0) #CPU temp
         draw.text((165, 162), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio zeug
