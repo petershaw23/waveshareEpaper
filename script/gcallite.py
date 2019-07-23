@@ -42,7 +42,7 @@ tomorrow = (datetime.utcnow() + timedelta(days=1)).isoformat() + 'Z'
 events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=tomorrow, maxResults=10, singleEvents=True, orderBy='startTime').execute()
 events = events_result.get('items', [])
 if not events:
-    geb = ('kein geb')
+    geb = ('kein bday!') #output, if no bday is found for the day
 for event in events:
     start = event['start'].get('dateTime', event['start'].get('date'))
     rawGeb = (start, event['summary'])

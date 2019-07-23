@@ -609,3 +609,213 @@ e-Paper busy
 e-Paper busy release
 spi end
 close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:05
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:06
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:07
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:08
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:09
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Geburtstage gcal.py: ('2019-07-23', 'test3')
+Output in uhr.py: test3
+thingspeak: temp 27.3  humidity: 57.0
+- multiroom audio offline - 
+23.07. 14:10
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein geb
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:11
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein geb
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:12
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein geb
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:13
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:14
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:15
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:16
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:17
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:18
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:19
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:20
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+Output in uhr.py: kein bday!
+thingspeak: temp 27.3  humidity: 56.9
+- multiroom audio offline - 
+23.07. 14:21
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
