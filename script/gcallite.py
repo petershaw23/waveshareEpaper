@@ -37,10 +37,10 @@ tomorrow = (datetime.utcnow() + timedelta(days=1)).isoformat() + 'Z'
 #print('Getting the upcoming 10 events')
 events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=tomorrow, maxResults=10, singleEvents=True, orderBy='startTime').execute()
 events = events_result.get('items', [])
+if not events:
+    geb = ('kein geb')
 for event in events:
     start = event['start'].get('dateTime', event['start'].get('date'))
-    heuteGeb = (start, event['summary'])
-    print ('Geburtstage: ' +str(heuteGeb))
-
-
-
+    rawGeb = (start, event['summary'])
+    print ('Geburtstage gcal.py: ' +str(rawGeb))
+    geb = rawGeb[1]

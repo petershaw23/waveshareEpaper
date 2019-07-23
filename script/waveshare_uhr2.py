@@ -14,15 +14,18 @@ from PIL import Image,ImageDraw,ImageFont
 from datetime import datetime
 Datum = datetime.now().strftime('%d.%m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
+# import gcallite.py, which gets birthday calendar and prints todays birthday via google cal API
+try:
+    import gcallite #imports gcallite.py from same directory
+    geb = gcallite.geb #call variable from imported file. should be a name or 'kein geb'
+    print ('Output in uhr.py: '+str(geb))
+except: #falls fehler
+    print ('gcallite error')
+    geb = 'error'
 
-import thingspeak #temperatur und humidity von thingspeak channel holen
+# temperatur und humidity von thingspeak channel holen
 try:
-    import gcallite
-    geb = gcallite.heuteGeb[1]
-    print('Output: '+str(geb))
-except:
-    print ('failed to import gcallite')
-try:
+    import thingspeak
     ch = thingspeak.Channel(647418)
     outRAW = ch.get({'results':1})
     outSplit = outRAW.split('\"')
