@@ -1,11 +1,21 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
-#uhr v2 by psw - zeigt  Uhrzeit, Datum, current volumio song, CPU temp, temp+humidity via thingspeak channel
+#uhr v2 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('-----------------------------')
+
+# google API get bdays
+try:
+    import gcallite #imports gcallite.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
+    geb = gcallite.geb #call variable from imported file. should be a name or 'kein geb'
+except: #falls fehler
+    geb = 'error'
+print ('Output in uhr.py: '+str(geb))
+###
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
 traw = f.readline ()
 t = round(float(traw) / 1000)
+###
 import sys
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
 import epd2in7 #lib fuer display
@@ -14,15 +24,7 @@ from PIL import Image,ImageDraw,ImageFont
 from datetime import datetime
 Datum = datetime.now().strftime('%d.%m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
-# import gcallite.py, which gets birthday calendar and prints todays birthday via google cal API
-try:
-    import gcallite #imports gcallite.py from same directory
-    geb = gcallite.geb #call variable from imported file. should be a name or 'kein geb'
-    print ('Output in uhr.py: '+str(geb))
-except: #falls fehler
-    print ('gcallite error')
-    geb = 'error'
-
+###
 # temperatur und humidity von thingspeak channel holen
 try:
     import thingspeak
@@ -37,33 +39,32 @@ except: #falls offline
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 #schriftarten definieren
-font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102)
-font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34)
-font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 23)
-font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 14)
+font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
+font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34) #font for date, bday
+font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 20) #font for volumio track ID
+font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 15) #font for temp, humi, cpu_temp
 # track ID via volumio REST api holen:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 (outputRAW, error) = trackid.communicate()
-if trackid.returncode != 0:
-  # print('Schlafzimmer aus?')
-   artist = 'off'
-   trackname = 'line'
-   print (str(artist)+str(' - ')+str(trackname))
+if trackid.returncode != 0: #if offline
+   artist = '- multiroom audio offline'
+   trackname = ''
 else:
-   #print(outputRAW)
    trackname = outputRAW.decode().split('\"')[9]
    artist = outputRAW.decode().split('\"')[13]
-   #albumart = outputRAW.decode().split('\"')[21]
-   print (str(artist)+str(' - ')+str(trackname))
-   #print (albumart)
+   #albumart = outputRAW.decode().split('\"')[21] #das waere sau cool
+
+print (str(artist)+str(' - ')+str(trackname))
 
 
+##############
+#draw function
+##############
 def main():
         #Init driver
         epd = epd2in7.EPD()
         print(Datum, Uhrzeit)
-        #print("init")
         epd.init()
 
         # Image with screen size
@@ -71,16 +72,12 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-
-        #draw a rectangle in the center of the screen
-        #draw.rectangle((epd2in7.EPD_WIDTH/2-10, epd2in7.EPD_HEIGHT/2-10, epd2in7.EPD_WIDTH/2+10, epd2in7.EPD_HEIGHT/2+10), fill = 0)
-
-        draw.text((45, -7), Datum, font = font18, fill = 0) #Datm
-        draw.text((130, -7), geb, font = font18, fill = 0)
+        draw.text((5, -7), Datum, font = font18, fill = 0) #Date
+        draw.text((130, -7), geb, font = font18, fill = 0) #bday
         draw.text((0, 162), str(t) +' °C', font = font8, fill = 0) #CPU temp
         draw.text((165, 162), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
-        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio zeug
-        draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #Uhrzeit
+        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
+        draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time
 
         #Update display
         epd.display(epd.getbuffer(image))
