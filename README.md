@@ -10,7 +10,7 @@ implemented functions:
 
 2 python scripts: 
 
-- waveshare_uhr2.py: handles the main script
+- waveshare_uhr2.py: handles the main functions
 - gcallite.py: handles google calendar API
 
 google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
