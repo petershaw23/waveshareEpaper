@@ -8,7 +8,7 @@ implemented functions:
 - calendar entries from google calendar API
 - date and time :)
 
-2 scripts: 
+2 python scripts: 
 
 - waveshare_uhr2.py: handles the main script
 - gcallite.py: handles google calendar API
