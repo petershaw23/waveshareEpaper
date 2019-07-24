@@ -40,9 +40,9 @@ print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 #schriftarten definieren
 font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
-font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 34) #font for date, bday
-font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 20) #font for volumio track ID
-font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 15) #font for temp, humi, cpu_temp
+font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date, bday
+font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
+font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
 # track ID via volumio REST api holen:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -73,9 +73,9 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = font18, fill = 0) #Date
-        draw.text((130, -7), geb, font = font18, fill = 0) #bday
-        draw.text((0, 162), str(t) +' °C', font = font8, fill = 0) #CPU temp
-        draw.text((165, 162), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
+        draw.text((106, -7), geb, font = font18, fill = 0) #bday
+        draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
+        draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
         draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time
 

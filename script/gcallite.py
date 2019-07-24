@@ -36,8 +36,10 @@ service = build('calendar', 'v3', credentials=creds)
     #Feiertage BW: k75hu0b8pa0t6j07h2f9v7i7553ftfoo@import.calendar.google.com
     #Feiertage D: de.german#holiday@group.v.calendar.google.com
     #Geli: v3bler8b7dm7h4uchn6mm5v01k@group.calendar.google.com
-now = datetime.utcnow().isoformat() + 'Z' # 'Z' indicates UTC time
-tomorrow = (datetime.utcnow() + timedelta(days=1)).isoformat() + 'Z'
+now = datetime.now().isoformat() + 'Z' # 'Z' indicates UTC time
+print ('now: '+str(now))
+tomorrow = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' #+24h = wrong.. will display one day before. set to +1h instead
+print ('tmrw: '+str(tomorrow))
 #print('Getting the upcoming 10 events')
 events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=tomorrow, maxResults=10, singleEvents=True, orderBy='startTime').execute()
 events = events_result.get('items', [])
