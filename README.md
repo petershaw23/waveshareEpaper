@@ -8,9 +8,11 @@ implemented functions:
 - calendar entries from google calendar API
 - date and time :)
 
-2 scripts: waveshare_uhr2.py: handles the main script
-           gcallite.py: handles google calendar API
+2 scripts: 
+-waveshare_uhr2.py: handles the main script
+-gcallite.py: handles google calendar API
+google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
-google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). cronjob looks like this:
+cronjob looks like this:
 crontab -e
 * * * * * /home/pi/script/waveshareEpaper/script/exec.sh >> /home/pi/script/waveshareEpaper/clocklog2.txt 2>&1
