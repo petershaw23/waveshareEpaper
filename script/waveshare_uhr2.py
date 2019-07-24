@@ -2,7 +2,10 @@
 # -*- coding:utf-8 -*-
 #uhr v2 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('-----------------------------')
-
+from datetime import datetime
+Datum = datetime.now().strftime('%d.%m.')
+Uhrzeit = datetime.now().strftime('%H:%M')
+print (Datum, Uhrzeit)
 # google API get bdays
 try:
     import gcallite #imports gcallite.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
@@ -21,9 +24,6 @@ sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
 import epd2in7 #lib fuer display
 import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
-from datetime import datetime
-Datum = datetime.now().strftime('%d.%m.')
-Uhrzeit = datetime.now().strftime('%H:%M')
 ###
 # temperatur und humidity von thingspeak channel holen
 try:
@@ -64,7 +64,6 @@ print (str(artist)+str(' - ')+str(trackname))
 def main():
         #Init driver
         epd = epd2in7.EPD()
-        print(Datum, Uhrzeit)
         epd.init()
 
         # Image with screen size

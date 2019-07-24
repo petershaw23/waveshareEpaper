@@ -14797,3 +14797,901 @@ e-Paper busy
 e-Paper busy release
 spi end
 close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:10:10.306112Z
+tmrw: 2019-07-24T10:10:10.306358Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:10
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:11:09.735707Z
+tmrw: 2019-07-24T10:11:09.735952Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:11
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:12:09.511682Z
+tmrw: 2019-07-24T10:12:09.511925Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:12
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:13:10.071491Z
+tmrw: 2019-07-24T10:13:10.071733Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:13
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:14:09.930985Z
+tmrw: 2019-07-24T10:14:09.931228Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:14
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:15:09.611579Z
+tmrw: 2019-07-24T10:15:09.611823Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.3
+- multiroom audio offline - 
+24.07. 09:15
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:16:10.256085Z
+tmrw: 2019-07-24T10:16:10.256330Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.4
+- multiroom audio offline - 
+24.07. 09:16
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:17:10.022224Z
+tmrw: 2019-07-24T10:17:10.022468Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.4
+- multiroom audio offline - 
+24.07. 09:17
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:18:09.736077Z
+tmrw: 2019-07-24T10:18:09.736321Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.4
+- multiroom audio offline - 
+24.07. 09:18
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:19:09.422665Z
+tmrw: 2019-07-24T10:19:09.422907Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.4
+- multiroom audio offline - 
+24.07. 09:19
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:20:10.352263Z
+tmrw: 2019-07-24T10:20:10.352502Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.4
+- multiroom audio offline - 
+24.07. 09:20
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:21:10.172262Z
+tmrw: 2019-07-24T10:21:10.172506Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:21
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:22:09.766275Z
+tmrw: 2019-07-24T10:22:09.766518Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:22
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:23:09.615423Z
+tmrw: 2019-07-24T10:23:09.615674Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:23
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:24:10.305885Z
+tmrw: 2019-07-24T10:24:10.306130Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:24
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:25:10.140828Z
+tmrw: 2019-07-24T10:25:10.141068Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:25
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:26:09.690888Z
+tmrw: 2019-07-24T10:26:09.691136Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:26
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:27:10.331241Z
+tmrw: 2019-07-24T10:27:10.331487Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:27
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:28:10.097563Z
+tmrw: 2019-07-24T10:28:10.097975Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:28
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:29:14.876012Z
+tmrw: 2019-07-24T10:29:14.876255Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:29
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:30:09.532215Z
+tmrw: 2019-07-24T10:30:09.532446Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.3  humidity: 55.5
+- multiroom audio offline - 
+24.07. 09:30
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:31:10.310463Z
+tmrw: 2019-07-24T10:31:10.310706Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:31
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:32:09.963379Z
+tmrw: 2019-07-24T10:32:09.963623Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:32
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:33:09.657279Z
+tmrw: 2019-07-24T10:33:09.657525Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:33
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:34:09.369523Z
+tmrw: 2019-07-24T10:34:09.369772Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:34
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:35:10.253426Z
+tmrw: 2019-07-24T10:35:10.253671Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:35
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:36:09.755312Z
+tmrw: 2019-07-24T10:36:09.755561Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:36
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:37:09.536042Z
+tmrw: 2019-07-24T10:37:09.536283Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:37
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:38:15.599134Z
+tmrw: 2019-07-24T10:38:15.599377Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:38
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:39:09.335055Z
+tmrw: 2019-07-24T10:39:09.335297Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:39
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:40:09.939399Z
+tmrw: 2019-07-24T10:40:09.939638Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.7
+- multiroom audio offline - 
+24.07. 09:40
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:41:09.534334Z
+tmrw: 2019-07-24T10:41:09.534580Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 56.6
+- multiroom audio offline - 
+24.07. 09:41
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:42:10.071982Z
+tmrw: 2019-07-24T10:42:10.072222Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 56.6
+- multiroom audio offline - 
+24.07. 09:42
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:43:09.771871Z
+tmrw: 2019-07-24T10:43:09.772110Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 56.6
+- multiroom audio offline - 
+24.07. 09:43
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:44:09.436567Z
+tmrw: 2019-07-24T10:44:09.436815Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 56.6
+- multiroom audio offline - 
+24.07. 09:44
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:45:10.127804Z
+tmrw: 2019-07-24T10:45:10.128046Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 56.6
+- multiroom audio offline - 
+24.07. 09:45
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:46:09.914878Z
+tmrw: 2019-07-24T10:46:09.915124Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:46
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:47:09.691625Z
+tmrw: 2019-07-24T10:47:09.692813Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:47
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:48:09.341253Z
+tmrw: 2019-07-24T10:48:09.341492Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:48
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:49:10.171797Z
+tmrw: 2019-07-24T10:49:10.172041Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:49
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:50:09.959377Z
+tmrw: 2019-07-24T10:50:09.959624Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:50
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:51:09.525329Z
+tmrw: 2019-07-24T10:51:09.525565Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:51
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:52:10.128968Z
+tmrw: 2019-07-24T10:52:10.129206Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:52
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:53:10.398748Z
+tmrw: 2019-07-24T10:53:10.398984Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:53
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:54:10.086850Z
+tmrw: 2019-07-24T10:54:10.087092Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:54
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:55:09.843704Z
+tmrw: 2019-07-24T10:55:09.843957Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:55
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:56:09.633524Z
+tmrw: 2019-07-24T10:56:09.633771Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:56
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:57:10.125541Z
+tmrw: 2019-07-24T10:57:10.125782Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:57
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:58:10.016373Z
+tmrw: 2019-07-24T10:58:10.016614Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:58
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T09:59:09.646365Z
+tmrw: 2019-07-24T10:59:09.646610Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 09:59
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T10:00:10.236678Z
+tmrw: 2019-07-24T11:00:10.236924Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 10:00
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T10:01:10.021003Z
+tmrw: 2019-07-24T11:01:10.021245Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 10:01
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T10:02:09.756969Z
+tmrw: 2019-07-24T11:02:09.757212Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 10:02
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T10:03:09.491475Z
+tmrw: 2019-07-24T11:03:09.491717Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 10:03
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+now: 2019-07-24T10:04:10.267290Z
+tmrw: 2019-07-24T11:04:10.267530Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+24.07. 10:04
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+24.07. 10:05
+now: 2019-07-24T10:05:12.478251Z
+tmrw: 2019-07-24T11:05:12.478497Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.4  humidity: 55.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+24.07. 10:06
+now: 2019-07-24T10:06:13.231570Z
+tmrw: 2019-07-24T11:06:13.231821Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.5  humidity: 56.4
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+24.07. 10:07
+now: 2019-07-24T10:07:09.978700Z
+tmrw: 2019-07-24T11:07:09.978945Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.5  humidity: 56.4
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+24.07. 10:08
+now: 2019-07-24T10:08:09.633512Z
+tmrw: 2019-07-24T11:08:09.633755Z
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.5  humidity: 56.4
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+24.07. 10:09
+Geburtstage gcal.py: ('2019-07-24', 'test')
+Output in uhr.py: test
+thingspeak: temp 28.5  humidity: 56.4
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
