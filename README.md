@@ -9,8 +9,10 @@ implemented functions:
 - date and time :)
 
 2 scripts: 
--waveshare_uhr2.py: handles the main script
--gcallite.py: handles google calendar API
+
+- waveshare_uhr2.py: handles the main script
+- gcallite.py: handles google calendar API
+
 google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
 cronjob looks like this:
