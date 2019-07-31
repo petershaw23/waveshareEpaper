@@ -4,7 +4,8 @@ from datetime import timedelta
 import pickle
 import os.path
 from googleapiclient.discovery import build
-
+from dateutil.parser import parse
+#import pandas as pd
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 
@@ -37,15 +38,32 @@ service = build('calendar', 'v3', credentials=creds)
     #Feiertage D: de.german#holiday@group.v.calendar.google.com
     #and: v3bler8b7dm7h4uchn6mm5v01k@group.calendar.google.com
 now = datetime.now().isoformat() + 'Z' # 'Z' indicates UTC time
-#print ('now: '+str(now)) #for debugging
-tomorrow = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' #+24h = wrong.. will display one day before. set to +1h instead
-#print ('tmrw: '+str(tomorrow)) #for debugging
-events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=tomorrow, maxResults=10, singleEvents=True, orderBy='startTime').execute()
+today = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' # hint: 11 pm will display tomorrows birthday
+tomorrow = (datetime.now() + timedelta(hours=24)).isoformat() + 'Z'
+next_week = (datetime.now() + timedelta(days=8)).isoformat() + 'Z'
+#bday today?
+events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=today, maxResults=1, singleEvents=True, orderBy='startTime').execute()
 events = events_result.get('items', [])
 if not events:
     geb = ('kein bday!') #output, if no bday is found for the day
 for event in events:
     start = event['start'].get('dateTime', event['start'].get('date'))
     rawGeb = (start, event['summary'])
-    print ('Geburtstage gcal.py: ' +str(rawGeb))
+    #print ('heute: ' +str(rawGeb))
     geb = rawGeb[1] #<- this variable is then called in uhr.py
+
+#next bday(s) within 8 days?
+events_result_next_geb = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=tomorrow, timeMax=next_week, maxResults=1, singleEvents=True, orderBy='startTime').execute()
+events_next_geb = events_result_next_geb.get('items', [])
+if not events_next_geb:
+    geb_next = ('nothing found!') #output, if no bdays are found
+for event_next_geb in events_next_geb:
+    start = event_next_geb['start'].get('dateTime', event_next_geb['start'].get('date'))
+    rawGeb_next = (start, event_next_geb['summary'])
+    #print ('next bday: ' +str(rawGeb_next))
+    start_conv = datetime.strptime(start, '%Y-%m-%d')
+    deltaRaw = start_conv - datetime.now()
+    delta = (deltaRaw.days + 1)
+    #print ('delta to next: ' +str(delta))
+    geb_next = rawGeb_next[1] #<- this variable is then called in uhr.py
+    #print ('in ' +str(delta) +'T: ' +str(geb_next))

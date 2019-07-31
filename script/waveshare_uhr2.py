@@ -10,9 +10,14 @@ print (Datum, Uhrzeit)
 try:
     import gcallite #imports gcallite.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
     geb = gcallite.geb #call variable from imported file. should be a name or 'kein geb'
+    geb_next = gcallite.geb_next
+    delta = gcallite.delta
 except: #falls fehler
     geb = 'error'
-print ('Output in uhr.py: '+str(geb))
+    geb_next = 'error'
+    delta = '?'
+print ('heute: '+str(geb))
+print ('in ' +str(delta) +'T: ' +str(geb_next))
 ###
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
@@ -74,6 +79,7 @@ def main():
         draw.text((5, -7), Datum, font = font18, fill = 0) #Date
         draw.text((106, -7), geb, font = font18, fill = 0) #bday
         draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
+        draw.text((20, 160), str('in ')+str(delta)+str(' T: ')+str(geb_next), font = font8, fill = 0) #next bday
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
         draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time
