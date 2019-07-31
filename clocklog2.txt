@@ -124465,3 +124465,1505 @@ e-Paper busy
 e-Paper busy release
 spi end
 close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:19
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:20
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:21
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:22
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:23
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:24
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:25
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:26
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:27
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:28
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:29
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:30
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:31
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:32
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:33
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:34
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:35
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:36
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:37
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:38
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:39
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:40
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:41
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:42
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:43
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:44
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:45
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:46
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:47
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:48
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:49
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:50
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:51
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 56.3
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:52
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 56.3
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:53
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 56.3
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:54
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 56.3
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:55
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 56.3
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:56
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:57
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:58
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 11:59
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:00
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:01
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:02
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:03
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:04
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:05
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:06
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:07
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:08
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:09
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:10
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.6
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:11
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:12
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:13
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:14
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:15
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:16
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:17
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:18
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:19
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:20
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 55.7
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:21
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 49.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:22
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 49.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:23
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 49.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:24
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 49.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:25
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 49.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:26
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 46.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:27
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 46.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:28
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 46.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:29
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 46.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:30
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 46.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:31
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:32
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:33
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:34
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:35
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:36
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 45.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:37
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 45.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:38
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 45.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:39
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 45.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:40
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 45.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:41
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:42
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:43
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:44
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:45
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.8
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:46
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:47
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:48
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:49
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:50
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.1  humidity: 46.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:51
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:52
+Muddi
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:53
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:54
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:55
+heute: 1
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Traceback (most recent call last):
+  File "/home/pi/script/waveshareEpaper/script/waveshare_uhr2.py", line 93, in <module>
+    main()
+  File "/home/pi/script/waveshareEpaper/script/waveshare_uhr2.py", line 80, in main
+    draw.text((106, -7), geb, font = font18, fill = 0) #bday
+  File "/usr/lib/python3/dist-packages/PIL/ImageDraw.py", line 264, in text
+    if self._multiline_check(text):
+  File "/usr/lib/python3/dist-packages/PIL/ImageDraw.py", line 255, in _multiline_check
+    return split_character in text
+TypeError: argument of type 'int' is not iterable
+-----------------------------
+31.07. 12:56
+heute:  
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 44.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:57
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 44.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:58
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 44.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 12:59
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 44.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:00
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.2  humidity: 44.0
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:01
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:02
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:03
+heute: T - 1 : testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:04
+heute: T - 1 : testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:05
+heute: T - 1 : testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:06
+heute: in 1 T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:07
+heute: in 1 T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Traceback (most recent call last):
+  File "/home/pi/script/waveshareEpaper/script/waveshare_uhr2.py", line 93, in <module>
+    main()
+  File "/home/pi/script/waveshareEpaper/script/waveshare_uhr2.py", line 82, in main
+    draw.text((5, 20), str(geb_next)+str(' hat in ')+str(delta),str(' Tagen Geburtstag!'), font = font8, fill = 0) #next bday
+TypeError: text() got multiple values for argument 'fill'
+-----------------------------
+31.07. 13:08
+heute: in 1 T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:09
+heute: in 1 T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:10
+heute: in 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:11
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:12
+heute: Muddi
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+31.07. 13:13
+heute: 1T: testgeb
+in 1T: testgeb
+thingspeak: temp 27.0  humidity: 45.2
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...

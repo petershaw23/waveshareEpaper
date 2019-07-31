@@ -79,7 +79,7 @@ def main():
         draw.text((5, -7), Datum, font = font18, fill = 0) #Date
         draw.text((106, -7), geb, font = font18, fill = 0) #bday
         draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
-        draw.text((20, 160), str('in ')+str(delta)+str(' T: ')+str(geb_next), font = font8, fill = 0) #next bday
+        #draw.text((5, 23), str(geb_next)+str(' hat in ')+str(delta)+str(' Tagen bday!'), font = font8, fill = 0) #next bday
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
         draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time

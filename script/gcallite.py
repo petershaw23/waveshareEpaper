@@ -40,23 +40,14 @@ service = build('calendar', 'v3', credentials=creds)
 now = datetime.now().isoformat() + 'Z' # 'Z' indicates UTC time
 today = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' # hint: 11 pm will display tomorrows birthday
 tomorrow = (datetime.now() + timedelta(hours=24)).isoformat() + 'Z'
-next_week = (datetime.now() + timedelta(days=8)).isoformat() + 'Z'
-#bday today?
-events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=today, maxResults=1, singleEvents=True, orderBy='startTime').execute()
-events = events_result.get('items', [])
-if not events:
-    geb = ('kein bday!') #output, if no bday is found for the day
-for event in events:
-    start = event['start'].get('dateTime', event['start'].get('date'))
-    rawGeb = (start, event['summary'])
-    #print ('heute: ' +str(rawGeb))
-    geb = rawGeb[1] #<- this variable is then called in uhr.py
+next_week = (datetime.now() + timedelta(days=9)).isoformat() + 'Z'
+
 
 #next bday(s) within 8 days?
 events_result_next_geb = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=tomorrow, timeMax=next_week, maxResults=1, singleEvents=True, orderBy='startTime').execute()
 events_next_geb = events_result_next_geb.get('items', [])
 if not events_next_geb:
-    geb_next = ('nothing found!') #output, if no bdays are found
+    geb_next = (' ') #output, if no bdays are found
 for event_next_geb in events_next_geb:
     start = event_next_geb['start'].get('dateTime', event_next_geb['start'].get('date'))
     rawGeb_next = (start, event_next_geb['summary'])
@@ -67,3 +58,14 @@ for event_next_geb in events_next_geb:
     #print ('delta to next: ' +str(delta))
     geb_next = rawGeb_next[1] #<- this variable is then called in uhr.py
     #print ('in ' +str(delta) +'T: ' +str(geb_next))
+
+
+#bday today?
+events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=today, maxResults=1, singleEvents=True, orderBy='startTime').execute()
+events = events_result.get('items', [])
+if not events:
+    geb = (str(delta)+str('T: ')+str(geb_next))
+for event in events:
+    start = event['start'].get('dateTime', event['start'].get('date'))
+    rawGeb = (start, event['summary'])
+    geb = rawGeb[1]
