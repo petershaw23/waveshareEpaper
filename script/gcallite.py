@@ -47,17 +47,19 @@ next_week = (datetime.now() + timedelta(days=9)).isoformat() + 'Z'
 events_result_next_geb = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=tomorrow, timeMax=next_week, maxResults=1, singleEvents=True, orderBy='startTime').execute()
 events_next_geb = events_result_next_geb.get('items', [])
 if not events_next_geb:
-    geb_next = (' ') #output, if no bdays are found
+    geb_next = str(' ') #output, if no bdays are found
+    delta = str(' ')
 for event_next_geb in events_next_geb:
     start = event_next_geb['start'].get('dateTime', event_next_geb['start'].get('date'))
     rawGeb_next = (start, event_next_geb['summary'])
-    #print ('next bday: ' +str(rawGeb_next))
+    print ('next bday: ' +str(rawGeb_next))
+    print (start)
     start_conv = datetime.strptime(start, '%Y-%m-%d')
     deltaRaw = start_conv - datetime.now()
     delta = (deltaRaw.days + 1)
-    #print ('delta to next: ' +str(delta))
+    print ('delta to next: ' +str(delta))
     geb_next = rawGeb_next[1] #<- this variable is then called in uhr.py
-    #print ('in ' +str(delta) +'T: ' +str(geb_next))
+    print ('in ' +str(delta) +'T: ' +str(geb_next))
 
 
 #bday today?
@@ -69,3 +71,5 @@ for event in events:
     start = event['start'].get('dateTime', event['start'].get('date'))
     rawGeb = (start, event['summary'])
     geb = rawGeb[1]
+    print (start)
+    print (geb)
