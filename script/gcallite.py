@@ -40,10 +40,11 @@ service = build('calendar', 'v3', credentials=creds)
 now = datetime.now().isoformat() + 'Z' # 'Z' indicates UTC time
 today = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' # hint: 11 pm will display tomorrows birthday
 tomorrow = (datetime.now() + timedelta(hours=24)).isoformat() + 'Z'
-next_week = (datetime.now() + timedelta(days=9)).isoformat() + 'Z'
+next_week = (datetime.now() + timedelta(days=10)).isoformat() + 'Z'
 
+#script kiddie implemenation, but it does the job. needs a remake, maybe just call next 10 events and analyze the result (check if date = today directly from result-list?) or maybe learn correct google API usage
 
-#next bday(s) within 8 days?
+#check if there is a bday within next 10 days
 events_result_next_geb = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=tomorrow, timeMax=next_week, maxResults=1, singleEvents=True, orderBy='startTime').execute()
 events_next_geb = events_result_next_geb.get('items', [])
 if not events_next_geb:
@@ -52,24 +53,21 @@ if not events_next_geb:
 for event_next_geb in events_next_geb:
     start = event_next_geb['start'].get('dateTime', event_next_geb['start'].get('date'))
     rawGeb_next = (start, event_next_geb['summary'])
-    print ('next bday: ' +str(rawGeb_next))
-    print (start)
+    #print ('next bday: ' +str(rawGeb_next))
     start_conv = datetime.strptime(start, '%Y-%m-%d')
     deltaRaw = start_conv - datetime.now()
     delta = (deltaRaw.days + 1)
-    print ('delta to next: ' +str(delta))
+    #print ('delta to next: ' +str(delta))
     geb_next = rawGeb_next[1] #<- this variable is then called in uhr.py
-    print ('in ' +str(delta) +'T: ' +str(geb_next))
+    #print ('in ' +str(delta) +'T: ' +str(geb_next))
 
 
-#bday today?
+#check if there is bday TODAY
 events_result = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=today, maxResults=1, singleEvents=True, orderBy='startTime').execute()
 events = events_result.get('items', [])
 if not events:
-    geb = (str(delta)+str('T: ')+str(geb_next))
+    geb = (str(delta)+str('T: ')+str(geb_next)) #if no bday today, show countdown to next bday
 for event in events:
     start = event['start'].get('dateTime', event['start'].get('date'))
     rawGeb = (start, event['summary'])
     geb = rawGeb[1]
-    print (start)
-    print (geb)
