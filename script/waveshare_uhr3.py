@@ -9,25 +9,16 @@ print (Datum, Uhrzeit)
 # google API get bdays
 try:
     import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
-    #geb = gcallite2.geb #call variable from imported file
     list = gcallite2.list #call list from imported file
     next_geb = list[0] #the first list entry
-    #print (next_geb)
     next_geb_dateRaw = (next_geb[0])
     next_geb_name = (next_geb[1])
     next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
     deltaRaw = next_geb_date - datetime.now()
     delta = (deltaRaw.days + 1)
     gebString = ('in ' +str(delta) +'T: ' +str(next_geb_name)) 
-    #print ('next bday in '+str(delta)+str(' days: ')+str(next_geb_name))
-    #if geb == str(' '): #if there is no bday today
-    #geb = ('in ' +str(delta) +'T: ' +str(next_geb_name))
 except: #falls fehler
     gebString = ' '
-    #next_geb_name = ' '
-    #next_geb = ' '
-    #delta = ' '
-#print ('heute: '+str(geb))
 print (gebString)
 ###
 import io
