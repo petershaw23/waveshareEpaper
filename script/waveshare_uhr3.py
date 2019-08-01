@@ -11,30 +11,30 @@ try:
     import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
     list = gcallite2.list #call list from imported file
     
-    next_geb = list[0] #the first list entry
-    uebernext_geb = list[1] #the next after the first one
-   
-    next_geb_dateRaw = (next_geb[0])
-    uebernext_geb_dateRaw = (uebernext_geb[0])
-    
-    next_geb_name = (next_geb[1])
-    uebernext_geb_name = (uebernext_geb[1])
-    
-    next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-    uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
-    
-    deltaRawNext = next_geb_date - datetime.now()
-    deltaRawUeberNext = uebernext_geb_date - datetime.now()
-    
-    deltaNext = (deltaRawNext.days + 1)
-    deltaUeberNext = (deltaRawUeberNext.days + 1)
-    
-    gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
-    gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name)) 
-    
+    try:
+        next_geb = list[0] #the first list entry
+        next_geb_dateRaw = (next_geb[0])
+        next_geb_name = (next_geb[1])
+        next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
+        deltaRawNext = next_geb_date - datetime.now()
+        deltaNext = (deltaRawNext.days + 1)
+        gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
+    except:
+        gebStringNext = ('no upcoming next bday in 8 days')
+    try:
+        uebernext_geb = list[1] #the next after the first one
+        uebernext_geb_dateRaw = (uebernext_geb[0])
+        uebernext_geb_name = (uebernext_geb[1])
+        uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
+        deltaRawUeberNext = uebernext_geb_date - datetime.now()
+        deltaUeberNext = (deltaRawUeberNext.days + 1)
+        gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
+    except:
+        gebStringUeberNext = (' no upcoming uebernext bday in 8 days')
+
 except: #falls fehler
-    gebStringNext = ' '
-    gebStringUeberNext = ' '
+    gebStringNext = 'error in gcallite.py'
+    gebStringUeberNext = 'error in gcallite.py'
 print (gebStringNext)
 print (gebStringUeberNext)
 ###
