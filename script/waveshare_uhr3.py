@@ -98,7 +98,7 @@ def main():
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = fontXL, fill = 0) #Date
         draw.text((106, -7), gebStringNext, font = fontL, fill = 0) #bday1
-        draw.text((106, 10), gebStringUeberNext, font = fontL, fill = 0) #bday2
+        draw.text((106, 12), gebStringUeberNext, font = fontM, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = fontM, fill = 0) #volumio track ID
