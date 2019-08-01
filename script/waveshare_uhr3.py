@@ -73,7 +73,7 @@ import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 (outputRAW, error) = trackid.communicate()
 if trackid.returncode != 0: #if offline
-   artist = '- multiroom audio offline'
+   artist = '                                               '
    trackname = ''
 else:
    trackname = outputRAW.decode().split('\"')[9]
