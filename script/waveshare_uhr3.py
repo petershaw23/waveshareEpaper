@@ -109,8 +109,8 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = fontXL, fill = 0) #Date
-        draw.text((106, -6), gebStringNext, font = fontM, fill = 0) #bday1
-        draw.text((106, 14), gebStringUeberNext, font = fontS, fill = 0) #bday2
+        draw.text((106, -5), gebStringNext, font = fontM, fill = 0) #bday1
+        draw.text((106, 16), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
         draw.text((5, 49), trackIDString, font = fontM, fill = 0) #volumio track ID
