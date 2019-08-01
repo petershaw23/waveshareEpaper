@@ -109,12 +109,12 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = fontXL, fill = 0) #Date
-        draw.text((106, -6), gebStringNext, font = fontL, fill = 0) #bday1
-        draw.text((106, 14), gebStringUeberNext, font = fontM, fill = 0) #bday2
+        draw.text((106, -6), gebStringNext, font = fontM, fill = 0) #bday1
+        draw.text((106, 14), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
-        draw.text((5, 39), trackIDString, font = fontM, fill = 0) #volumio track ID
-        draw.text((5, 55), Uhrzeit, font = fontXXL, fill = 0) #time
+        draw.text((5, 49), trackIDString, font = fontM, fill = 0) #volumio track ID
+        draw.text((5, 58), Uhrzeit, font = fontXXL, fill = 0) #time
 
         #Update display
         epd.display(epd.getbuffer(image))
