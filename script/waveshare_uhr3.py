@@ -91,8 +91,8 @@ print (trackIDString)
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date
-fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) #font for bday
-fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 26) #font for bday
+fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 20) #font for volumio track ID, bday2
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
 ########################################################################################################
 ##############
@@ -109,8 +109,8 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = fontXL, fill = 0) #Date
-        draw.text((106, -7), gebStringNext, font = fontL, fill = 0) #bday1
-        draw.text((106, 12), gebStringUeberNext, font = fontM, fill = 0) #bday2
+        draw.text((106, -6), gebStringNext, font = fontL, fill = 0) #bday1
+        draw.text((106, 14), gebStringUeberNext, font = fontM, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
         draw.text((5, 39), trackIDString, font = fontM, fill = 0) #volumio track ID
