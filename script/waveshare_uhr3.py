@@ -10,16 +10,33 @@ print (Datum, Uhrzeit)
 try:
     import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
     list = gcallite2.list #call list from imported file
+    
     next_geb = list[0] #the first list entry
+    uebernext_geb = list[1] #the next after the first one
+   
     next_geb_dateRaw = (next_geb[0])
+    uebernext_geb_dateRaw = (uebernext_geb[0])
+    
     next_geb_name = (next_geb[1])
+    uebernext_geb_name = (uebernext_geb[1])
+    
     next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-    deltaRaw = next_geb_date - datetime.now()
-    delta = (deltaRaw.days + 1)
-    gebString = ('in ' +str(delta) +'T: ' +str(next_geb_name)) 
+    uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
+    
+    deltaRawNext = next_geb_date - datetime.now()
+    deltaRawUeberNext = uebernext_geb_date - datetime.now()
+    
+    deltaNext = (deltaRawNext.days + 1)
+    deltaUeberNext = (deltaRawUeberNext.days + 1)
+    
+    gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
+    gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name)) 
+    
 except: #falls fehler
-    gebString = ' '
-print (gebString)
+    gebStringNext = ' '
+    gebStringUeberNext = ' '
+print (gebStringNext)
+print (gebStrinUeberNext)
 ###
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
@@ -47,7 +64,8 @@ print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 #schriftarten definieren
 font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
-font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date, bday
+font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date
+font16 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) #font for bday
 font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
 font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
 # track ID via volumio REST api holen:
@@ -79,9 +97,9 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = font18, fill = 0) #Date
-        draw.text((106, -7), gebString, font = font18, fill = 0) #bday
+        draw.text((106, -7), gebStringNext, font = font16, fill = 0) #bday1
+        draw.text((106, 10), gebStringUeberNext, font = font16, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
-        #draw.text((5, 23), str(geb_next)+str(' hat in ')+str(delta)+str(' Tagen bday!'), font = font8, fill = 0) #next bday
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
         draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
         draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time
