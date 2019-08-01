@@ -19,7 +19,7 @@ try:
         deltaRawNext = next_geb_date - datetime.now()
         deltaNext = (deltaRawNext.days + 1)
         if deltaNext == 0:
-            gebStringNext = str(next_geb_name)
+            gebStringNext = str(next_geb_name)+str('!')
         elif deltaNext == 1:
             gebStringNext = ('morgen: '+str(next_geb_name))
         else:
