@@ -20,6 +20,8 @@ try:
         deltaNext = (deltaRawNext.days + 1)
         if deltaNext == 0:
             gebStringNext = str(next_geb_name)
+        elif deltaNext == 1:
+            gebStringNext = ('morgen: '+str(next_geb_name))
         else:
             gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
     except:
@@ -31,8 +33,10 @@ try:
         uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
         deltaRawUeberNext = uebernext_geb_date - datetime.now()
         deltaUeberNext = (deltaRawUeberNext.days + 1)
-        
-        gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
+        if deltaUeberNext == 1:
+            gebStringUeberNext = ('morgen: '+str(uebernext_geb_name))
+        else:
+            gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
     except:
         gebStringUeberNext = ('no further bday in next week')
 
