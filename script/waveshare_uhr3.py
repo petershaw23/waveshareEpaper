@@ -9,7 +9,7 @@ print (Datum, Uhrzeit)
 # google API get bdays
 try:
     import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
-    geb = gcallite2.geb #call variable from imported file
+    #geb = gcallite2.geb #call variable from imported file
     list = gcallite2.list #call list from imported file
     next_geb = list[0] #the first list entry
     #print (next_geb)
@@ -18,15 +18,17 @@ try:
     next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
     deltaRaw = next_geb_date - datetime.now()
     delta = (deltaRaw.days + 1)
+    gebString = ('in ' +str(delta) +'T: ' +str(next_geb_name)) 
     #print ('next bday in '+str(delta)+str(' days: ')+str(next_geb_name))
-    if geb == str(' '): #if there is no bday today
-        geb = ('in ' +str(delta) +'T: ' +str(next_geb_name))
+    #if geb == str(' '): #if there is no bday today
+    #geb = ('in ' +str(delta) +'T: ' +str(next_geb_name))
 except: #falls fehler
-    geb = 'error'
-    geb_next = 'error'
-    delta = '?'
-print ('heute: '+str(geb))
-print ('in ' +str(delta) +'T: ' +str(next_geb))
+    gebString = ' '
+    #next_geb_name = ' '
+    #next_geb = ' '
+    #delta = ' '
+#print ('heute: '+str(geb))
+print (gebString)
 ###
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
@@ -86,7 +88,7 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((5, -7), Datum, font = font18, fill = 0) #Date
-        draw.text((106, -7), geb, font = font18, fill = 0) #bday
+        draw.text((106, -7), gebString, font = font18, fill = 0) #bday
         draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
         #draw.text((5, 23), str(geb_next)+str(' hat in ')+str(delta)+str(' Tagen bday!'), font = font8, fill = 0) #next bday
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity

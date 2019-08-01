@@ -1,0 +1,48 @@
+-----------------------------
+01.08. 11:53
+in 6T: Test
+thingspeak: temp 26.2  humidity: 45.5
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+01.08. 11:54
+ 
+thingspeak: temp 26.2  humidity: 45.5
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+01.08. 11:55
+ 
+thingspeak: temp 26.2  humidity: 45.5
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...
+-----------------------------
+01.08. 11:56
+ 
+thingspeak: temp 26.1  humidity: 43.9
+- multiroom audio offline - 
+e-Paper busy
+e-Paper busy release
+Horizontal
+e-Paper busy
+e-Paper busy release
+spi end
+close 5V, Module enters 0 power consumption ...

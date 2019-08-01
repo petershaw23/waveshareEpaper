@@ -39,31 +39,32 @@ service = build('calendar', 'v3', credentials=creds)
 now = datetime.now().isoformat() + 'Z' # 'Z' indicates UTC time
 today = (datetime.now() + timedelta(hours=1)).isoformat() + 'Z' # hint: 11 pm will display tomorrows birthday
 tomorrow = (datetime.now() + timedelta(hours=24)).isoformat() + 'Z'
-next_week = (datetime.now() + timedelta(days=8)).isoformat() + 'Z'
+next_week = (datetime.now() + timedelta(days=7)).isoformat() + 'Z'
 
 # google calendar api get bdays in list
-geb = str(' ') 
-list = [] #create emtpy list
+#geb = str(' ') 
+list = [] #create emtpy list to put bdays in
 events_result_next_geb = service.events().list(calendarId='f89cl7qbv0ucgern33rhrtucno@group.calendar.google.com', timeMin=now, timeMax=next_week, maxResults=10, singleEvents=True, orderBy='startTime').execute()
 events_next_geb = events_result_next_geb.get('items', [])
 if not events_next_geb:
-    geb_next = str(' ') #output, if no bdays are found
-    delta = str(' ')
-    geb = str(' ')
-
+    #geb_next = str(' ') #output, if no bdays are found
+    #delta = str(' ')
+    #geb = str(' ')
+    #do nothing. list stays empty
+    list = []
 for event_next_geb in events_next_geb:
     start = event_next_geb['start'].get('dateTime', event_next_geb['start'].get('date'))
     rawGeb_next = (start, event_next_geb['summary'])
     #print (str(rawGeb_next))
-    start_conv = datetime.strptime(start, '%Y-%m-%d')
-    deltaRaw = start_conv - datetime.now()
-    delta = (deltaRaw.days + 1)
-    if delta > 0: #if the bday is not today
+    #start_conv = datetime.strptime(start, '%Y-%m-%d')
+    #deltaRaw = start_conv - datetime.now()
+    #delta = (deltaRaw.days + 1)
+    #if delta > 0: #if the bday is not today
        #print ('nicht heute!')
-       list.append(rawGeb_next)
-    else:
+    list.append(rawGeb_next)
+    #else:
        #print ('heute!') #if the bday is today
-       geb = rawGeb_next[1]
+      # geb = rawGeb_next[1]
        #print (geb)
 
 #print ('____')
