@@ -36,7 +36,7 @@ except: #falls fehler
     gebStringNext = ' '
     gebStringUeberNext = ' '
 print (gebStringNext)
-print (gebStrinUeberNext)
+print (gebStringUeberNext)
 ###
 import io
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
