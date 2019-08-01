@@ -20,7 +20,7 @@ try:
         deltaNext = (deltaRawNext.days + 1)
         gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
     except:
-        gebStringNext = ('no upcoming next bday in 8 days')
+        gebStringNext = ('no bday in next week')
     try:
         uebernext_geb = list[1] #the next after the first one
         uebernext_geb_dateRaw = (uebernext_geb[0])
@@ -30,7 +30,7 @@ try:
         deltaUeberNext = (deltaRawUeberNext.days + 1)
         gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
     except:
-        gebStringUeberNext = (' no upcoming uebernext bday in 8 days')
+        gebStringUeberNext = ('no further bday in next week')
 
 except: #falls fehler
     gebStringNext = 'error in gcallite.py'
