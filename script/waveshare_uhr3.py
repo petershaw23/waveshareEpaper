@@ -18,7 +18,10 @@ try:
         next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
         deltaRawNext = next_geb_date - datetime.now()
         deltaNext = (deltaRawNext.days + 1)
-        gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
+        if deltaNext == 0:
+            gebStringNext = str(next_geb_name)
+        else:
+            gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
     except:
         gebStringNext = ('no bday in next week')
     try:
@@ -28,6 +31,7 @@ try:
         uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
         deltaRawUeberNext = uebernext_geb_date - datetime.now()
         deltaUeberNext = (deltaRawUeberNext.days + 1)
+        
         gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
     except:
         gebStringUeberNext = ('no further bday in next week')
