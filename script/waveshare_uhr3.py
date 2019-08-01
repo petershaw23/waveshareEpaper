@@ -62,27 +62,31 @@ except: #falls offline
     outHumi = '??'
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
+
+
+# track ID via volumio REST api holen:
+import subprocess, os
+trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+(outputRAW, error) = trackid.communicate()
+if trackid.returncode != 0: #if offline
+   artist = ''
+   trackname = ''
+   trackIDString = 'volumio offline'
+else:
+   trackname = outputRAW.decode().split('\"')[9]
+   artist = outputRAW.decode().split('\"')[13]
+   trackIDString = 'str(artist)+str(' - ')+str(trackname)'
+   #albumart = outputRAW.decode().split('\"')[21] #das waere sau cool
+
+print (trackIDString)
+######################################################################################################
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) #font for bday
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
-# track ID via volumio REST api holen:
-import subprocess, os
-trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-(outputRAW, error) = trackid.communicate()
-if trackid.returncode != 0: #if offline
-   artist = '                                               '
-   trackname = ''
-else:
-   trackname = outputRAW.decode().split('\"')[9]
-   artist = outputRAW.decode().split('\"')[13]
-   #albumart = outputRAW.decode().split('\"')[21] #das waere sau cool
-
-print (str(artist)+str(' - ')+str(trackname))
-
-
+########################################################################################################
 ##############
 #draw function
 ##############
@@ -101,7 +105,7 @@ def main():
         draw.text((106, 12), gebStringUeberNext, font = fontM, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
-        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = fontM, fill = 0) #volumio track ID
+        draw.text((5, 39), trackIDString, font = fontM, fill = 0) #volumio track ID
         draw.text((5, 55), Uhrzeit, font = fontXXL, fill = 0) #time
 
         #Update display
