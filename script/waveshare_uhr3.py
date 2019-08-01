@@ -63,11 +63,11 @@ except: #falls offline
 print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
 
 #schriftarten definieren
-font24 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
-font18 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date
-font16 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) #font for bday
-font14 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
-font8 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
+fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) #font for time
+fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) #font for date
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) #font for bday
+fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #font for volumio track ID
+fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) #font for temp, humi, cpu_temp
 # track ID via volumio REST api holen:
 import subprocess, os
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -96,13 +96,13 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-        draw.text((5, -7), Datum, font = font18, fill = 0) #Date
-        draw.text((106, -7), gebStringNext, font = font16, fill = 0) #bday1
-        draw.text((106, 10), gebStringUeberNext, font = font16, fill = 0) #bday2
-        draw.text((0, 160), str(t) +' °C', font = font8, fill = 0) #CPU temp
-        draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = font8, fill = 0) #Temp+Humidity
-        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = font14, fill = 0) #volumio track ID
-        draw.text((5, 55), Uhrzeit, font = font24, fill = 0) #time
+        draw.text((5, -7), Datum, font = fontXL, fill = 0) #Date
+        draw.text((106, -7), gebStringNext, font = fontL, fill = 0) #bday1
+        draw.text((106, 10), gebStringUeberNext, font = fontL, fill = 0) #bday2
+        draw.text((0, 160), str(t) +' °C', font = fontS, fill = 0) #CPU temp
+        draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontS, fill = 0) #Temp+Humidity
+        draw.text((5, 39), str(artist)+str(' - ')+str(trackname), font = fontM, fill = 0) #volumio track ID
+        draw.text((5, 55), Uhrzeit, font = fontXXL, fill = 0) #time
 
         #Update display
         epd.display(epd.getbuffer(image))
