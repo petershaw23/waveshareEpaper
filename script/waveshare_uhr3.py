@@ -103,23 +103,22 @@ def main():
         #Init driver
         epd = epd2in7.EPD()
         epd.init()
-
         # Image with screen size
         #255: clear the image with white
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
+        
+        
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -7), str(Datum)+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
+        draw.text((0, -8), str(Datum)+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
         draw.line((0, 24, 264, 24), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
-        
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
-        
         draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 54), Uhrzeit, font = fontXXL, fill = 0)           # time
