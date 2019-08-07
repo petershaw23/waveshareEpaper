@@ -16,7 +16,7 @@ implemented functions:
 - gcallite.py: handles google calendar API
 
 current display layout can be seen live here:
-Inline-style: 
+
 ![alt text](https://peter-shaw.de/test.jpeg "Webcam Shot")
 
 
