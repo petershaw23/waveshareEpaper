@@ -1,4 +1,5 @@
 # waveshareEpaper
+
 short write up on https://peter-shaw.de/en/2019/07/diy-e-paper-display-with-raspberry-pi-zero-waveshare-e-paper-hat/
 multi purpose script for waveshare 2.7 inch black/white
 
@@ -13,6 +14,9 @@ implemented functions:
 
 - waveshare_uhr2.py: handles the main functions
 - gcallite.py: handles google calendar API
+
+current display layout can be seen live here:
+https://peter-shaw.de/test.jpeg
 
 google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
