@@ -111,7 +111,7 @@ def main():
         draw = ImageDraw.Draw(image)
         draw.text((2, -7), Datum, font = fontXL, fill = 0)              # Date
         draw.text((99, -5), gebStringNext, font = fontL, fill = 0)     # bday1
-        draw.text((2, 19), gebStringUeberNext, font = fontS, fill = 0) #bday2
+        draw.text((2, 20), gebStringUeberNext, font = fontS, fill = 0) #bday2
         
         
         draw.line((0, 50, 264, 50), fill = 0)
