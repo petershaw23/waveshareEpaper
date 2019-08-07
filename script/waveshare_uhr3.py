@@ -129,6 +129,9 @@ def main():
         p = subprocess.Popen(["pwd"], stdout=subprocess.PIPE)
         out = p.stdout.read()
         print (out)
+        p = subprocess.Popen(["/script/waveshareEpaper/script/webcam.sh"], stdout=subprocess.PIPE)
+        out2 = p.stdout.read()
+        print (out2)
 
 if __name__ == '__main__':
     main()
