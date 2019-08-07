@@ -94,7 +94,7 @@ fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) 
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 22) # font for bday2
-fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) # font for temp, humi, cpu_temp
+fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 15) # font for temp, humi, cpu_temp
 ########################################################################################################
 ##############
 #draw function
@@ -119,11 +119,11 @@ def main():
         #draw.rectangle((10, 150, 60, 200), fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
         draw.text((2, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
-        draw.line((0, 80, 264, 80), fill = 0)
+        draw.line((0, 78, 264, 78), fill = 0)
         draw.text((2, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 162, 264, 162), fill = 0)
-        draw.text((0, 160), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
-        draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
+        draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
+        draw.text((158, 161), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
 
         #Update display
         epd.display(epd.getbuffer(image))
