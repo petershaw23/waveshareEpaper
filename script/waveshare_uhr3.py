@@ -3,7 +3,7 @@
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('-----------------------------')
 from datetime import datetime
-Datum = datetime.now().strftime('%d.%m.')
+Datum = datetime.now().strftime('%-d.%-m')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 # google API get bdays
