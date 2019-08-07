@@ -113,7 +113,7 @@ def main():
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
         draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1
-        draw.line((0, 20, 264, 120), fill = 0)
+        draw.line((0, 22, 264, 22), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
