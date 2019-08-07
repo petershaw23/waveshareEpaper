@@ -89,7 +89,7 @@ else:
 print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
-fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 106) # font for time
+fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 107) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
@@ -113,16 +113,16 @@ def main():
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
         draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1
-        draw.line((0, 20, 264, 120), fill = 1)
+        draw.line((0, 20, 264, 120), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
-        draw.line((0, 50, 264, 50), fill = 1)
+        #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
         
         draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((0, 55), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.text((-3, 54), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 161), str(outTemp) +'°C     ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
