@@ -15,7 +15,7 @@ multi purpose script for waveshare 2.7 inch black/white
 - waveshare_uhr2.py: handles the main functions
 - gcallite.py: handles google calendar API
 
-## current display layout:
+## real world display layout (webcam pic):
 
 ![alt text](https://peter-shaw.de/test.jpeg "Webcam Shot")
 
