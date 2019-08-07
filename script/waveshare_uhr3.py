@@ -122,7 +122,7 @@ def main():
         
         draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((-3, 54), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.text((-4, 54), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 161), str(outTemp) +'°C     ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
