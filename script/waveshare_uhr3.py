@@ -89,7 +89,7 @@ else:
 print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
-fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 105) # font for time
+fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 106) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
@@ -122,8 +122,8 @@ def main():
         
         draw.text((0, 47), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((0, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
-        draw.line((0, 162, 264, 162), fill = 0)
+        draw.text((0, 56), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.line((0, 161, 264, 161), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 161), str(outTemp) +'°C     ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
 
