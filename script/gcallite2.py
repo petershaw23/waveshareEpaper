@@ -1,4 +1,5 @@
-#only works with prior oauth via google api. need files "token.pickle" and/or (?) credentials.json in same dir! read https://developers.google.com/calendar/quickstart/python for info
+# this script handles the google calendar API
+# only works with prior oauth via google api. need files "token.pickle" and/or (?) credentials.json in same dir! read https://developers.google.com/calendar/quickstart/python for info
 from datetime import datetime
 from datetime import timedelta
 import pickle
