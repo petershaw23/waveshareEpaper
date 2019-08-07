@@ -20,7 +20,8 @@ multi purpose script for waveshare 2.7 inch black/white
 ![alt text](https://peter-shaw.de/test.jpeg "Webcam Shot")
 
 
-google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
+## google calendar api 
+api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
 ## cronjob looks like this:
 <code>crontab -e</code><br>
