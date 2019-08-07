@@ -109,10 +109,10 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 20, 264, 45), fill = 0)
+        draw.rectangle((0, 0, 264, 48), fill = 0)
         draw.text((0, -7), Datum, font = fontXL, fill = 1)              # Date
         draw.text((98, -7), gebStringNext, font = fontL, fill = 1)     # bday1
-        draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
+        draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 1) #bday2
         draw.line((0, 50, 264, 50), fill = 1)
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         
