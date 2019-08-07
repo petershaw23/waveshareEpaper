@@ -21,7 +21,7 @@ try:
         if deltaNext == 0:
             gebStringNext = str(next_geb_name)+str('!')
         elif deltaNext == 1:
-            gebStringNext = ('morgen: '+str(next_geb_name))
+            gebStringNext = ('mrgn: '+str(next_geb_name))
         else:
             gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
     except:
