@@ -109,7 +109,7 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-        draw.rectangle((0, 0, 264, 49), fill = 0)
+        #draw.rectangle((0, 0, 264, 49), fill = 0)
         draw.text((0, -7), Datum, font = fontXL, fill = 1)              # Date
         draw.text((75, -5), gebStringNext, font = fontL, fill = 1)     # bday1
         draw.line((0, 20, 264, 120), fill = 1)
@@ -118,8 +118,9 @@ def main():
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
+        draw.rectangle((0, 55, 264, 77), fill = 0)
         draw.text((0, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
-        draw.line((0, 77, 264, 77), fill = 0)
+        #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((0, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 162, 264, 162), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
