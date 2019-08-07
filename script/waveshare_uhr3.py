@@ -110,7 +110,7 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
-        draw.rectangle((0, 50, 264, 73), fill = 0) #rectangle behind track ID
+        draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
         draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1
         draw.line((0, 20, 264, 120), fill = 1)
@@ -120,10 +120,10 @@ def main():
         
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
         
-        draw.text((0, 47), trackIDString, font = fontM, fill = 1)       # volumio track ID
+        draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((0, 56), Uhrzeit, font = fontXXL, fill = 0)           # time
-        draw.line((0, 161, 264, 161), fill = 0)
+        draw.text((0, 55), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.line((0, 160, 264, 160), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 161), str(outTemp) +'°C     ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
 
