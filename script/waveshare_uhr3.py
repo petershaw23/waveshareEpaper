@@ -79,7 +79,7 @@ trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subproce
 if trackid.returncode != 0: #if offline
    artist = ' '
    trackname = ' '
-   trackIDString = 'volumio offline'
+   trackIDString = 'Volumio Offline'
 else:
    trackname = outputRAW.decode().split('\"')[9]
    artist = outputRAW.decode().split('\"')[13]
@@ -91,7 +91,7 @@ print (trackIDString)
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 105) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
-fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 22) # font for bday2
 fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 15) # font for temp, humi, cpu_temp
@@ -109,18 +109,16 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-        draw.text((2, -7), Datum, font = fontXL, fill = 0)              # Date
-        draw.text((99, -5), gebStringNext, font = fontL, fill = 0)     # bday1
-        draw.text((2, 20), gebStringUeberNext, font = fontS, fill = 0) #bday2
-        
-        
+        draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
+        draw.text((98, -7), gebStringNext, font = fontL, fill = 0)     # bday1
+        draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.line((0, 50, 264, 50), fill = 0)
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         #draw.rectangle((10, 150, 60, 200), fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
-        draw.text((2, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
+        draw.text((0, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
         draw.line((0, 78, 264, 78), fill = 0)
-        draw.text((2, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.text((0, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 162, 264, 162), fill = 0)
         draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 161), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
