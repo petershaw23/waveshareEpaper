@@ -131,11 +131,12 @@ def main():
         #sleep display
         epd.sleep()
         # webcam pic to remote server (useful for layout adjustment if waveshare display is not in the same room)
+        # install fswebcam to use (sudo apt-get install fswebcam)
         #p = subprocess.Popen(["pwd"], stdout=subprocess.PIPE) # to check current directory
         #out = p.stdout.read()
         #print (out)
-        p2 = subprocess.Popen(["script/waveshareEpaper/script/webcam.sh"], stdout=subprocess.PIPE)
-        out2 = p2.stdout.read()
+        #p2 = subprocess.Popen(["script/waveshareEpaper/script/webcam.sh"], stdout=subprocess.PIPE)
+        #out2 = p2.stdout.read()
         #print (out2) #for debugging of the webcam.sh script
 
 if __name__ == '__main__':
