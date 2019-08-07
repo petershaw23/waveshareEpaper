@@ -131,7 +131,7 @@ def main():
         #print (out)
         p2 = subprocess.Popen(["script/waveshareEpaper/script/webcam.sh"], stdout=subprocess.PIPE)
         out2 = p2.stdout.read()
-        print (out2)
+        #print (out2) #for debugging of the webcam.sh script
 
 if __name__ == '__main__':
     main()
