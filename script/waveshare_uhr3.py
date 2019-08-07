@@ -89,7 +89,7 @@ else:
 print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
-fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) # font for time
+fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 105) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) # font for volumio track ID
@@ -118,8 +118,9 @@ def main():
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         #draw.rectangle((10, 150, 60, 200), fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
-        draw.text((5, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
-        draw.text((5, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.text((2, 49), trackIDString, font = fontM, fill = 0)       # volumio track ID
+        draw.line((0, 165, 264, 165), fill = 0)
+        draw.text((2, 58), Uhrzeit, font = fontXXL, fill = 0)           # time
 
         #Update display
         epd.display(epd.getbuffer(image))
