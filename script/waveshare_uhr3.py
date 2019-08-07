@@ -23,9 +23,9 @@ try:
         elif deltaNext == 1:
             gebStringNext = ('mrgn: '+str(next_geb_name))
         else:
-            gebStringNext = ('in ' +str(deltaNext) +'T: ' +str(next_geb_name)) 
+            gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
     except:
-        gebStringNext = ('no bday in next week')
+        gebStringNext = (' ')
     try:
         uebernext_geb = list[1] #the next after the first one
         uebernext_geb_dateRaw = (uebernext_geb[0])
@@ -36,9 +36,9 @@ try:
         if deltaUeberNext == 1:
             gebStringUeberNext = ('morgen: '+str(uebernext_geb_name))
         else:
-            gebStringUeberNext = ('in ' +str(deltaUeberNext) +'T: ' +str(uebernext_geb_name))
+            gebStringUeberNext = ('t-' +str(deltaUeberNext) +': ' +str(uebernext_geb_name))
     except:
-        gebStringUeberNext = ('no further bday in next week')
+        gebStringUeberNext = (' ')
 
 except: #falls fehler
     gebStringNext = 'error in gcallite.py'
