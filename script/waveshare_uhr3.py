@@ -91,7 +91,7 @@ print (trackIDString)
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 105) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
-fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for bday1
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 30) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 22) # font for bday2
 fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 15) # font for temp, humi, cpu_temp
@@ -110,7 +110,7 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
-        draw.text((98, -7), gebStringNext, font = fontL, fill = 0)     # bday1
+        draw.text((98, -7), gebStringNext, font = fontL, fill = 1)     # bday1
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.line((0, 50, 264, 50), fill = 0)
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
