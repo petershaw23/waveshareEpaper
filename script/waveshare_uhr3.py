@@ -114,7 +114,7 @@ def main():
         draw.text((101, 19), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
-        draw.line((0, 50, 220, 50), fill = 0)
+        draw.line((0, 50, 250, 50), fill = 0)
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         #draw.rectangle((10, 150, 60, 200), fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
