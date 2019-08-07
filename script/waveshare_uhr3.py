@@ -126,7 +126,7 @@ def main():
         #sleep display
         epd.sleep()
         # webcam feedback for remote disgning of the display layout (useful if waveshare display is not in the same room)
-        os.system('./webcam.sh')
+        os.system('webcam.sh')
 
 if __name__ == '__main__':
     main()
