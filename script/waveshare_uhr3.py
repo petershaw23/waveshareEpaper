@@ -3,7 +3,7 @@
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('-----------------------------')
 from datetime import datetime
-Datum = datetime.now().strftime('%-d.%-m')
+Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 # google API get bdays
@@ -111,7 +111,7 @@ def main():
         draw = ImageDraw.Draw(image)
         draw.rectangle((0, 0, 264, 49), fill = 0)
         draw.text((0, -7), Datum, font = fontXL, fill = 1)              # Date
-        draw.text((80, -5), gebStringNext, font = fontL, fill = 1)     # bday1
+        draw.text((75, -5), gebStringNext, font = fontL, fill = 1)     # bday1
         draw.line((0, 20, 264, 120), fill = 1)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 1) #bday2
         draw.line((0, 50, 264, 50), fill = 1)
