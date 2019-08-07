@@ -94,7 +94,7 @@ fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) 
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) # font for bday2
-fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) # font for temp, humi, cpu_temp
+fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 17) # font for temp, humi, cpu_temp
 ########################################################################################################
 ##############
 #draw function
@@ -114,17 +114,17 @@ def main():
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -8), str(Datum)+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
-        draw.line((5, 25, 259, 25), fill = 0)
+        draw.line((5, 26, 259, 26), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
         draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((-4, 54), Uhrzeit, font = fontXXL, fill = 0)           # time
+        draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 161), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
-        draw.text((158, 161), str(outTemp) +'°C     ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
+        draw.text((0, 160), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
+        draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
 
         #Update display
         epd.display(epd.getbuffer(image))
