@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
-print ('-----------------------------')
+print ('------------------------')
 from datetime import datetime
 Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
@@ -34,9 +34,9 @@ try:
         deltaRawUeberNext = uebernext_geb_date - datetime.now()
         deltaUeberNext = (deltaRawUeberNext.days + 1)
         if deltaUeberNext == 1:
-            gebStringUeberNext = ('morgen: '+str(uebernext_geb_name))
+            gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
         else:
-            gebStringUeberNext = ('t-' +str(deltaUeberNext) +': ' +str(uebernext_geb_name))
+            gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
     except:
         gebStringUeberNext = (' ')
 
@@ -113,7 +113,7 @@ def main():
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -8), str(Datum)+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
+        draw.text((0, -8), str(Datum)+str(' ')+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
         draw.line((5, 26, 259, 26), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
