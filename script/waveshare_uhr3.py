@@ -80,7 +80,7 @@ if trackid.returncode != 0: #if offline
    artist = ' '
    trackname = ' '
    #trackIDString = '        Volumio Offline' # placeholder for test 
-   trackIDString = '........................... '
+   trackIDString = '- - - - - - - - - - - - - - - - - - - - -'
 else:
    trackname = outputRAW.decode().split('\"')[9]
    artist = outputRAW.decode().split('\"')[13]
