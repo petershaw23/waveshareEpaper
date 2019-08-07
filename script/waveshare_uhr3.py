@@ -123,8 +123,8 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 160), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
-        draw.text((158, 160), str(outTemp) +'°C   ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
+        draw.text((0, 159), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
+        draw.text((158, 159), str(outTemp) +'°C   ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
 
         #Update display
         epd.display(epd.getbuffer(image))
