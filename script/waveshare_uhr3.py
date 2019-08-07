@@ -79,7 +79,8 @@ trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subproce
 if trackid.returncode != 0: #if offline
    artist = ' '
    trackname = ' '
-   trackIDString = '        Volumio Offline'
+   #trackIDString = '        Volumio Offline' # placeholder for test 
+   trackIDString = ' '
 else:
    trackname = outputRAW.decode().split('\"')[9]
    artist = outputRAW.decode().split('\"')[13]
