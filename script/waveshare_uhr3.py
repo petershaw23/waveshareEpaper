@@ -112,7 +112,7 @@ def main():
         draw.rectangle((0, 0, 264, 49), fill = 0)
         draw.text((0, -7), Datum, font = fontXL, fill = 1)              # Date
         draw.text((80, -5), gebStringNext, font = fontL, fill = 1)     # bday1
-        draw.line((0, 12, 264, 12), fill = 1)
+        draw.line((0, 20, 264, 120), fill = 1)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 1) #bday2
         draw.line((0, 50, 264, 50), fill = 1)
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
