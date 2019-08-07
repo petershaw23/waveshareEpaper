@@ -125,7 +125,7 @@ def main():
         epd.display(epd.getbuffer(image))
         #sleep display
         epd.sleep()
-        # webcam feedback for remote disgning of the display layout (useful if waveshare display is not in the same room)
+        # webcam pic to remote server (useful for layout adjustment if waveshare display is not in the same room)
         #p = subprocess.Popen(["pwd"], stdout=subprocess.PIPE) # to check current directory
         #out = p.stdout.read()
         #print (out)
