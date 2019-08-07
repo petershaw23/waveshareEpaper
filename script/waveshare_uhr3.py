@@ -90,10 +90,10 @@ print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 102) # font for time
-fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 32) # font for date
-fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 28) # font for bday1
-fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
-fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 20) # font for bday2
+fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
+fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 25) # font for volumio track ID
+fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 22) # font for bday2
 fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) # font for temp, humi, cpu_temp
 ########################################################################################################
 ##############
@@ -109,9 +109,9 @@ def main():
         image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
-        draw.text((5, -7), Datum, font = fontXL, fill = 0)              # Date
-        draw.text((101, -5), gebStringNext, font = fontL, fill = 0)     # bday1
-        draw.text((101, 19), gebStringUeberNext, font = fontS, fill = 0) #bday2
+        draw.text((2, -7), Datum, font = fontXL, fill = 0)              # Date
+        draw.text((99, -5), gebStringNext, font = fontL, fill = 0)     # bday1
+        draw.text((2, 19), gebStringUeberNext, font = fontS, fill = 0) #bday2
         draw.text((0, 160), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
         draw.text((158, 160), str(outTemp) +'°C    ' +str(outHumi) +str('%'), font = fontXS, fill = 0) # Temp+Humidity
         draw.line((0, 50, 264, 50), fill = 0)
