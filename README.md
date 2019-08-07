@@ -16,7 +16,7 @@ implemented functions:
 - gcallite.py: handles google calendar API
 
 current display layout can be seen live here:
-https://peter-shaw.de/test.jpeg
+[img]https://peter-shaw.de/test.jpeg[/img]
 
 google calendar api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
