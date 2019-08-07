@@ -110,7 +110,7 @@ def main():
         #Object image on which we will draw
         draw = ImageDraw.Draw(image)
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
-        draw.rectangle((0, 52, 264, 77), fill = 0) #rectangle behind track ID
+        draw.rectangle((0, 52, 264, 75), fill = 0) #rectangle behind track ID
         draw.text((0, -7), Datum, font = fontXL, fill = 0)              # Date
         draw.text((75, -5), gebStringNext, font = fontL, fill = 0)     # bday1
         draw.line((0, 20, 264, 120), fill = 1)
