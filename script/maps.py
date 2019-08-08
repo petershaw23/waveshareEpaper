@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 import googlemaps
+import json
 from datetime import datetime
 import credentialsmaps
 maps_key = credentialsmaps.maps_key
@@ -12,4 +13,5 @@ directions_result = gmaps.directions("Sydney Town Hall",
                                      mode="transit",
                                      departure_time=now)
                                      
-print (directions_result)
+jsonliste=json.loads(directions_result)
+print(jsonliste['departure_time'])
