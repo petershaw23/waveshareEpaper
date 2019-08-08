@@ -5,9 +5,9 @@ maps_key = credentialsmaps.maps_key
 url = "https://maps.googleapis.com/maps/api/directions/json?origin=Hauptbahnhof+Mannheim&destination=Hauptbahnhof+Heidelberg&language=de&mode=transit&key=" + maps_key
 data = requests.get(url=url)
 jsonobj = json.loads(data.content)
-print (jsonobj)
+#print (jsonobj)
 
-print (jsonobj["routes"][0]["legs"])
+print (jsonobj["routes"][0]["legs"]["arrivaltime"])
 
 #print (output)
 #print (output['status'])
