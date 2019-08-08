@@ -9,4 +9,4 @@ output = json.loads(binary)
 
 # test to see if the request was valid
 print (output['status'])
-print (output['departure_time'])
+print (output)
