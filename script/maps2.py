@@ -8,5 +8,8 @@ binary = data.content
 output = json.loads(binary)
 
 # test to see if the request was valid
-print (output['status'])
+
 print (output)
+print (output['status'])
+print (output['distance'])
+print (output['copyright'])
