@@ -4,9 +4,8 @@ import credentialsmaps # imports local file credentialmaps.py with google maps a
 maps_key = credentialsmaps.maps_key
 url = "https://maps.googleapis.com/maps/api/directions/json?origin=Hauptbahnhof+Mannheim&destination=Hauptbahnhof+Heidelberg&language=de&mode=transit&key=" + maps_key
 data = requests.get(url=url)
-print (data.content)
-
-# test to see if the request was valid
+jsonobj = json.loads(data.content)
+print (jsonobj)
 
 #print (output)
 #print (output['status'])
