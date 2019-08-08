@@ -11,5 +11,5 @@ output = json.loads(binary)
 
 print (output)
 print (output['status'])
-print (output['geocoded_waypoints'])
+print (output['legs'])
 
