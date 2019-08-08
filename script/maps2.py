@@ -9,9 +9,8 @@ output = json.loads(binary)
 
 # test to see if the request was valid
 
-print (output)
+#print (output)
 print (output['status'])
-legs = (output.get('routes', 'legs'))
+print (output.get("routes", "none"))
 
-print (legs)
 
