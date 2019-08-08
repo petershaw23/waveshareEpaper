@@ -15,5 +15,7 @@ depart = (jsonobj["routes"][0]["legs"][0]["arrival_time"]["text"])
 print (str('naechster zug: ')+str(depart))
 
 depart_conv = datetime.strptime(depart, '%H:%M')
-delta = depart_conv - datetime.now() 
+delta_uncorrect = depart_conv - datetime.now() 
+print (delta_uncorrect)
+delta = delta_uncorrect - (1900,0,0,0,0,0,0)
 print (delta)
