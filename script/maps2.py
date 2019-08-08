@@ -7,7 +7,7 @@ data = requests.get(url=url)
 jsonobj = json.loads(data.content)
 #print (jsonobj)
 
-print (jsonobj["routes"][0]["legs"]["arrival_time"])
+print (jsonobj["routes"][0]["legs"][0]["arrival_time"])
 
 #print (output)
 #print (output['status'])
