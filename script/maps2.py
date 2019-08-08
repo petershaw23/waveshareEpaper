@@ -11,5 +11,7 @@ output = json.loads(binary)
 
 print (output)
 print (output['status'])
-print (output['routes'])
+routes = (output['routes'])
+legs = (routes['legs'])
+print (legs)
 
