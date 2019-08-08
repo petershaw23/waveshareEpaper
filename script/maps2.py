@@ -1,15 +1,7 @@
 import json, requests, pprint
-
-url = 'http://maps.googleapis.com/maps/api/directions/json?'
-
-params = dict(
-    origin='Chicago,IL',
-    destination='Los+Angeles,CA',
-    waypoints='Joplin,MO|Oklahoma+City,OK',
-    sensor='false'
-)
-
-
+import credentialsmaps
+maps_key = credentialsmaps.maps_key
+url = 'https://maps.googleapis.com/maps/api/directions/json?origin=Brooklyn&destination=Queens&mode=transit&key=maps_key'
 data = requests.get(url=url, params=params)
 binary = data.content
 output = json.loads(binary)
