@@ -15,13 +15,7 @@ binary = data.content
 output = json.loads(binary)
 
 # test to see if the request was valid
-#print output['status']
+print (output['status'])
 
 # output all of the results
-#pprint.pprint(output)
-
-# step-by-step directions
-for route in output['routes']:
-        for leg in route['legs']:
-            for step in leg['steps']:
-                print (step['html_instructions'])
+pprint.pprint(output)
