@@ -10,4 +10,7 @@ gmaps = googlemaps.Client(key=maps_key)
 now = datetime.now()
 data = gmaps.directions("Sydney Town Hall", "Parramatta, NSW", mode="transit", departure_time=now)
 my_json_string = json.dumps(data)
-print (my_json_string)
+y = json.loads(my_json_string)
+
+# the result is a Python dictionary:
+print(y["departure_time"]) 
