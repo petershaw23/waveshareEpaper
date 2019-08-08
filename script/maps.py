@@ -13,5 +13,5 @@ directions_result = gmaps.directions("Sydney Town Hall",
                                      mode="transit",
                                      departure_time=now)
                                      
-jsonliste=json.loads(directions_result)
+jsonliste=json.loads(str(directions_result))
 print(jsonliste['departure_time'])
