@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import json
 import requests
 import credentialsmaps # imports local file credentialmaps.py with google maps api key
