@@ -9,4 +9,4 @@ gmaps = googlemaps.Client(key=maps_key)
 # Request directions via public transit
 now = datetime.now()
 data = gmaps.directions("Sydney Town Hall", "Parramatta, NSW", mode="transit", departure_time=now)
-print (data[:32])
+print (data[start:3])
