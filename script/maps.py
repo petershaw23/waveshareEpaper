@@ -13,4 +13,4 @@ my_json_string = json.dumps(data)
 y = json.loads(my_json_string)
 
 # the result is a Python dictionary:
-print(y["departure_time"]) 
+print(y[3]) 
