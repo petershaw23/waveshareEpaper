@@ -11,7 +11,7 @@ print (data.content)
 #print (output)
 #print (output['status'])
 #print (output.keys())
-print (output.values())
+#print (output.values())
 #routes = (output['routes'])
 #depart = routes[5]
 #print (depart)
