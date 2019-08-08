@@ -15,5 +15,5 @@ depart = (jsonobj["routes"][0]["legs"][0]["arrival_time"]["text"])
 print (str('naechster zug: ')+str(depart))
 
 depart_conv = datetime.strptime(depart, '%H:%M')
-delta = datetime.now() - depart_conv
+delta = depart_conv - datetime.now() 
 print (delta)
