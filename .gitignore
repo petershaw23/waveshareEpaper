@@ -3,3 +3,5 @@ token.pickle
 clocklog3.txt
 test.jpeg
 credentialsmaps.py
+/script/__pycache_/*
+*.pyc
