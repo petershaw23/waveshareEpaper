@@ -24,4 +24,4 @@ output = json.loads(binary)
 for route in output['routes']:
         for leg in route['legs']:
             for step in leg['steps']:
-                print step['html_instructions']
+                print (step['html_instructions'])
