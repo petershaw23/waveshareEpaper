@@ -8,4 +8,4 @@ jsonobj = json.loads(data.content)
 #print (jsonobj)
 
 depart = (jsonobj["routes"][0]["legs"][0]["arrival_time"]["text"])
-print (str'naechster zug: ')+str(depart))
+print (str('naechster zug: ')+str(depart))
