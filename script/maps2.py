@@ -11,5 +11,5 @@ output = json.loads(binary)
 
 print (output)
 print (output['status'])
-print (output['distance'])
-print (output['copyright'])
+print (output['geocoded_status'])
+
