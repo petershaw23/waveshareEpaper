@@ -8,10 +8,9 @@ gmaps = googlemaps.Client(key=maps_key)
 
 # Request directions via public transit
 now = datetime.now()
-directions_result = gmaps.directions("Sydney Town Hall",
-                                     "Parramatta, NSW",
-                                     mode="transit",
-                                     departure_time=now)
-                                     
-jsonliste=json.loads(str(directions_result))
-print(jsonliste['departure_time'])
+data = gmaps.directions("Sydney Town Hall", "Parramatta, NSW", mode="transit", departure_time=now)
+binary = data.content
+output = json.loads(binary)
+
+# test to see if the request was valid
+print (output['status'])
