@@ -9,5 +9,5 @@ gmaps = googlemaps.Client(key=maps_key)
 # Request directions via public transit
 now = datetime.now()
 data = gmaps.directions("Sydney Town Hall", "Parramatta, NSW", mode="transit", departure_time=now)
-dataString = ''.join(data)
-print (dataString)
+my_json_string = json.dumps(data)
+print (my_json_string)
