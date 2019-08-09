@@ -22,8 +22,12 @@ now_minute = now.minute
 print (now_minute)
 delta_minute = depart_minute - now_minute
 print (delta_minute)
-if delta_minute < 15:
-  print ('das wird eng!')
+if delta_minute < 15 > 12:
+    print ('das wird eng!')
+elif delta_minute = 12:
+    print ('jetzt losrennen!)
+elif delta_minute < 12:
+    print ('den kriegst du nicht mehr!)
 #delta_uncorrect = depart_conv - datetime.now() 
 #print (delta_uncorrect)
 
