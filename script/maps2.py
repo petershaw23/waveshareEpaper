@@ -22,7 +22,7 @@ now_minute = now.minute
 print (now_minute)
 delta_minute = depart_minute - now_minute
 print (delta_minute)
-print("Das ist in: %s Minuten" % (delta.minute))
+print("Das ist in: %s Minuten" % (delta_minute))
 if delta_minute < 15 > 12:
     print ('das wird eng!')
 elif delta_minute == 12:
