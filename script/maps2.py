@@ -18,5 +18,5 @@ depart_conv = datetime.strptime(depart, '%H:%M')
 delta_uncorrect = depart_conv - datetime.now() 
 
 print (delta_uncorrect)
-print (delta_uncorrect.minute)
+print (delta_uncorrect.minutes)
 
