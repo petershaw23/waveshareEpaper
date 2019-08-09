@@ -22,5 +22,5 @@ only_hours = datetime.strptime(delta_uncorrect, "%d %b %Y  %H:%M:%S.%f")
 
 
 print (delta_uncorrect)
-print only_hours.minute
+print (only_hours.minute)
 
