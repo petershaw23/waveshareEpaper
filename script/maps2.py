@@ -16,6 +16,11 @@ print (str('naechster zug: ')+str(depart))
 
 depart_conv = datetime.strptime(depart, '%H:%M')
 delta_uncorrect = depart_conv - datetime.now() 
+
+
+only_hours = datetime.strptime(delta_uncorrect, "%d %b %Y  %H:%M:%S.%f")
+
+
 print (delta_uncorrect)
-#delta = timedelta(delta_uncorrect - datetime(1900,1,1,0,0,0,0))
-#print (delta)
+print only_hours.minute
+
