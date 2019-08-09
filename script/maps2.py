@@ -16,11 +16,12 @@ print (str('naechster zug: ')+str(depart))
 
 depart_conv = datetime.strptime(depart, '%H:%M')
 depart_minute = (depart_conv.minute)
+print (depart_minute+str( '= depart minute'))
 now = datetime.now() 
 now_minute = now.minute
-
+print (now_minute+str( '= now minute'))
 delta_minute = depart_minute - now_minute
-print (delta_minute)
+print (delta_minute+str( '= delta minute'))
 #delta_uncorrect = depart_conv - datetime.now() 
 #print (delta_uncorrect)
 
