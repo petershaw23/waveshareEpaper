@@ -1,6 +1,6 @@
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
-func = GPIO.gpio_function(1)
+func = GPIO.gpio_function(01)
 func = GPIO.gpio_function(2)
 func = GPIO.gpio_function(3)
 func = GPIO.gpio_function(4)
