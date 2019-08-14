@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+# script to clean display and GPIO pins
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 import sys
