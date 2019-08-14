@@ -5,3 +5,4 @@ test.jpeg
 credentialsmaps.py
 /script/__pycache_/*
 *.pyc
+*.txt
