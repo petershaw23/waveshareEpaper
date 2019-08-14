@@ -1,16 +1,26 @@
-#import epd2in7
-#import Image
-#import ImageFont
-#import ImageDraw
+#!/usr/bin/python
+# -*- coding:utf-8 -*-
+print ('------------------------')
+from datetime import datetime
+import io
+import sys
+sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
+import epd2in7 #lib fuer display
+import epdconfig #config fuer display
+from PIL import Image,ImageDraw,ImageFont
+import subprocess, os
+Datum = datetime.now().strftime('%-d.%-m.')
+Uhrzeit = datetime.now().strftime('%H:%M')
+print (Datum, Uhrzeit)
 
 import RPi.GPIO as GPIO
 import time
 
 GPIO.setmode(GPIO.BCM)
 
-#epd = epd2in7.EPD()
-#epd.init()
-#image = Image.new('1', (epd2in7.EPD_WIDTH, epd2in7.EPD_HEIGHT), 255)    # 255: clear the image with white
+
+
+
 
 key1 = 5
 key2 = 6
@@ -22,16 +32,32 @@ GPIO.setup(key2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(key3, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(key4, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
+
+
+#schriftarten definieren
+fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 107) # font for time
+fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
+fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
+fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
+fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) # font for bday2
+fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 18) # font for temp, humi, cpu_temp
+
+
+
 def updateDisplay(string):
-
-    #draw = ImageDraw.Draw(image)
-    #font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 18)
-
-    #draw.text((20, 50), string, font = font, fill = 0)
-    #draw.rectangle((epd2in7.EPD_WIDTH/2-10, epd2in7.EPD_HEIGHT/2-10, epd2in7.EPD_WIDTH/2+10, epd2in7.EPD_HEIGHT/2+10), fill = 0)
-    print('update display')
-    #epd.display_frame(epd.get_frame_buffer(image))
-
+    #Init driver
+    epd = epd2in7.EPD()
+    epd.init()
+    # Image with screen size
+    #255: clear the image with white
+    image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
+    #Object image on which we will draw
+    draw = ImageDraw.Draw(image)
+    draw.text((20, 50), string, font = fontXL, fill = 0)
+    #Update display
+    epd.display(epd.getbuffer(image))
+    #sleep display
+    epd.sleep()
 def main():
 
     while True:
@@ -41,17 +67,20 @@ def main():
         key4state = GPIO.input(key4)
 
         if key1state == False:
-            print('Key1 Pressed')
+            updateDisplay('Key1 pressed - Küche on')
+            print('Key1 Pressed - Küche on')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.38')
             time.sleep(0.2)
         if key2state == False:
+            updateDisplay('Key2 pressed - Wohnzimmer on')
             print('Key2 Pressed')
             time.sleep(0.2)
         if key3state == False:
-            print('Key3 Pressed')
+            print('Key3 Pressed - noch nichts')
             time.sleep(0.2)
         if key4state == False:
-            print('Key4 Pressed')
-            #updateDisplay('Key4 pressed')
+            print('Key4 Pressed - Alles off')
+            updateDisplay('Key2 pressed - Alles off')
             time.sleep(0.2)
 
 if __name__ == '__main__':
