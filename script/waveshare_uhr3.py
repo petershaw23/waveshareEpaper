@@ -146,7 +146,8 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 159), 'cpu: '+str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+str(tempD1)+'°C  '+str(humiD1)+str('%    Δt: ' )+str(deltaT)+str('°C  ΔH: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
+        draw.text((0, 0), str(t),font = fontXS, fill = 0)
+        draw.text((0, 159), 'in:'+str(tempPi1)+'°C|'+str(humiPi1)+str('%  out:')+str(tempD1)+'°C|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°C|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
         
 
         #Update display
