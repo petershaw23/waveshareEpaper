@@ -84,8 +84,8 @@ try:
     tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
     humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
 except:
-    tempD1 = jsonobj2["feeds"][0]["field1"])
-    humiD1 = jsonobj2["feeds"][0]["field2"])
+    tempD1 = jsonobj2["feeds"][0]["field1"]
+    humiD1 = jsonobj2["feeds"][0]["field2"]
 #calculate deltas
 try:
     deltaT = round(float(tempPi1) - float(tempD1))
