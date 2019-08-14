@@ -3,7 +3,9 @@
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('------------------------')
 from datetime import datetime
-import thingspeak
+import json
+import requests
+import http.client, urllib.parse
 import io
 import sys
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
@@ -60,55 +62,26 @@ traw = f.readline ()
 t = round(float(traw) / 1000)
 ###
 
-
-
 ###
 # temperatur und humidity von thingspeak channel holen
-try:
-    chPi1 = thingspeak.Channel(647418)
-    outRAWPi1 = chPi1.get({'results':1})
-    chD1 = thingspeak.Channel(843073)
-    outRAWD1 = chD1.get({'results':1})
-except: #falls offline
-    outTempPi1 = 'off'
-    outHumiPi1 = 'off'
-    outTempD1 = 'off'
-    outHumiD1 = 'off'
-    deltaT = 'off'
-    deltaH = 'off'    
-    
-outSplitPi1 = outRAWPi1.split('\"')
-try:
-    outTempPi1 = outSplitPi1[-18]
-except:
-    outTempPi1 = 'err'
-    
-try:
-    outHumiPi1 = outSplitPi1[-14]
-except:
-    outHumiPi1 = 'err'
-   
-outSplitD1 = outRAWD1.split('\"')
-    
-try:
-    outTempD1 = outSplitD1[-14]
-except:
-    outTempD1 = 'err'
-try:
-    outHumiD1 = outSplitD1[-10]
-except: 
-    outTempD1 = 'err'
-    
-try:
-    deltaT = round(float(outTempPi1) - float(outTempD1), 2)
-    deltaH = round(float(outHumiPi1) - float(outHumiD1), 2)
-except:
-    deltaT = 'err'
-    deltaH = 'err'
 
+# pi1 data
+data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
+jsonobj1 = json.loads(data1.content.decode('utf-8'))
+tempPi1 = (jsonobj1["feeds"][0]["field3"])
+humiPi1 = (jsonobj1["feeds"][0]["field5"])
 
+# d1 mini data
+data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
+jsonobj2 = json.loads(data2.content.decode('utf-8'))
+tempD1 = (jsonobj2["feeds"][0]["field1"])
+humiD1 = (jsonobj2["feeds"][0]["field2"])
 
-print (str(t)+'°C   in: '+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    out: ')+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    Δt: ' )+str(deltaT)+str('°C   ΔH: ' )+str(deltaH))
+#calculate deltas
+deltaT = round(float(tempPi1) - float(tempD1), 3)
+deltaH = round(float(humiPi1) - float(humiD1), 3)
+
+print (str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+str(tempD1)+'°C  '+str(humiD1)+str('%    Δt: ' )+str(deltaT)+str('°C   ΔH: ' )+str(deltaH))
     
 # track ID via volumio REST api holen:
 
@@ -162,7 +135,7 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 159), 'cpu: '+str(t)+'°C   in: '+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    out: ')+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    Δt: ' )+str(deltaT)+str('°C  ΔH: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
+        draw.text((0, 159), 'cpu: '+str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+str(tempD1)+'°C  '+str(humiD1)+str('%    Δt: ' )+str(deltaT)+str('°C  ΔH: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
         
 
         #Update display
