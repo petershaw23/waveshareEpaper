@@ -15,10 +15,7 @@ print (Datum, Uhrzeit)
 
 import time
 epd = epd2in7.EPD()
-epd.init()
-# Image with screen size
-#255: clear the image with white
-image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
+
 
 
 key1 = 5
@@ -45,6 +42,10 @@ fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 18) 
 
 
 def updateDisplay(string):
+    epd.init()
+    # Image with screen size
+    #255: clear the image with white
+    image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
     draw = ImageDraw.Draw(image)
     draw.text((5, 50), string, font = fontL, fill = 0)
     epd.display(epd.getbuffer(image))
