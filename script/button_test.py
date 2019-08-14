@@ -34,7 +34,7 @@ def main():
             time.sleep(0.2)
         if key4state == False:
             print('Key4 Pressed')
-            updateDisplay('Key4 pressed')
+            
             time.sleep(0.2)
 
 if __name__ == '__main__':
