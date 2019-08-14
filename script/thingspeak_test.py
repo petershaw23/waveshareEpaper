@@ -1,3 +1,4 @@
+import thingspeak
 ###
 # temperatur und humidity von thingspeak channel holen
 try:
