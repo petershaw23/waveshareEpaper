@@ -77,8 +77,8 @@ try:
     outTempD1 = outSplitD1[-14]
     outHumiD1 = outSplitD1[-10]
     
-    deltaT = round(float(outTempPi1) - float(outTempD1), 1)
-    deltaH = round(float(outHumiPi1) - float(outHumiD1), 1)
+    deltaT = round(float(outTempPi1) - float(outTempD1), 2)
+    deltaH = round(float(outHumiPi1) - float(outHumiD1), 2)
 
 except: #falls offline
     outTempPi1 = 'err'
