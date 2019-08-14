@@ -6,6 +6,7 @@ from datetime import datetime
 import thingspeak
 import io
 import sys
+sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
 import epd2in7 #lib fuer display
 import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
@@ -59,7 +60,7 @@ traw = f.readline ()
 t = round(float(traw) / 1000)
 ###
 
-sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
+
 
 ###
 # temperatur und humidity von thingspeak channel holen
