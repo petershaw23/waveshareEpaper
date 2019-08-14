@@ -70,7 +70,7 @@ t = round(float(traw) / 1000)
 #try:
 data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
 jsonobj1 = json.loads(data1.content.decode('utf-8'))
-tempPi1 = round(float(jsonobj1["feeds"][0]["field3"]), 1)
+tempPi1 = round(float(jsonobj1["feeds"][0]["field3"]))
 humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
 #except:
 #tempPi1 = 'off'
@@ -80,14 +80,14 @@ humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
 time.sleep(2)
 data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
-tempD1 = round(float(jsonobj2["feeds"][0]["field1"]), 1)
+tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
 humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
 #except:
 #    tempD1 = 'off'
 #    humiD1 = 'off'
 #calculate deltas
 try:
-    deltaT = round(float(tempPi1) - float(tempD1), 1)
+    deltaT = round(float(tempPi1) - float(tempD1))
     deltaH = round(float(humiPi1) - float(humiD1))
 except:
     deltaT = 'err'
@@ -147,7 +147,7 @@ def main():
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
         draw.text((120, 110), str(t),font = fontXS, fill = 0)             #cpu temp
-        draw.text((0, 159), 'in:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  out:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
+        draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
         
 
         #Update display
