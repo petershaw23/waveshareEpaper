@@ -13,14 +13,8 @@ Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 
-import RPi.GPIO as GPIO
 import time
-
-GPIO.setmode(GPIO.BCM)
-
-
-
- epd = epd2in7.EPD()
+epd = epd2in7.EPD()
 epd.init()
 # Image with screen size
 #255: clear the image with white
@@ -33,6 +27,8 @@ key2 = 6
 key3 = 13
 key4 = 19
 
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
 GPIO.setup(key1, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(key2, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 GPIO.setup(key3, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -49,15 +45,10 @@ fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) #
 fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 18) # font for temp, humi, cpu_temp
 
 
-
 def updateDisplay(string):
-    #Init driver
-   
     draw.text((5, 50), string, font = fontL, fill = 0)
-    #Update display
     epd.display(epd.getbuffer(image))
-    
-   
+ 
 def main():
 
     while True:
