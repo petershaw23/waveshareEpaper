@@ -1,21 +1,21 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 print ('------------------------')
-from datetime import datetime
-import io
+#from datetime import datetime
+#import io
 import sys
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
-import epd2in7 #lib fuer display
-import epdconfig #config fuer display
-from PIL import Image,ImageDraw,ImageFont
+#import epd2in7 #lib fuer display
+#import epdconfig #config fuer display
+#from PIL import Image,ImageDraw,ImageFont
 import subprocess, os
 Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 
 import time
-epd = epd2in7.EPD()
-epd.init()
+#epd = epd2in7.EPD()
+#epd.init()
 
 
 key1 = 5
@@ -45,11 +45,11 @@ def updateDisplay(string):
     
     # Image with screen size
     #255: clear the image with white
-    image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
-    draw = ImageDraw.Draw(image)
-    draw.text((5, 50), string, font = fontL, fill = 0)
-    epd.display(epd.getbuffer(image))
- 
+    #image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
+    #draw = ImageDraw.Draw(image)
+    #draw.text((5, 50), string, font = fontL, fill = 0)
+    #epd.display(epd.getbuffer(image))
+    print(string)
 def main():
 
     while True:
