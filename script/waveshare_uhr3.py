@@ -108,7 +108,7 @@ except:
 
 
 
-print (str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH))
+print (str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Δt: ' )+str(deltaT)+str('°C   ΔH: ' )+str(deltaH))
     
 # track ID via volumio REST api holen:
 
@@ -162,7 +162,7 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 159), 'cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
+        draw.text((0, 159), 'cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Δt: ' )+str(deltaT)+str('°C   ΔH: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
         
 
         #Update display
