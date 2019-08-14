@@ -53,7 +53,7 @@ def updateDisplay(string):
     image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
     #Object image on which we will draw
     draw = ImageDraw.Draw(image)
-    draw.text((20, 50), string, font = fontXL, fill = 0)
+    draw.text((5, 50), string, font = fontL, fill = 0)
     #Update display
     epd.display(epd.getbuffer(image))
     #sleep display
@@ -67,20 +67,28 @@ def main():
         key4state = GPIO.input(key4)
 
         if key1state == False:
-            updateDisplay('Key1 pressed - Küche on')
-            print('Key1 Pressed - Küche on')
-            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.38')
+            updateDisplay('Key1 pressed - Schlafzimmer on')
+            print('Key1 Pressed - Schlafi on')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
+            
         if key2state == False:
-            updateDisplay('Key2 pressed - Wohnzimmer on')
-            print('Key2 Pressed')
+            updateDisplay('Key2 pressed - Küche on')
+            print('Key2 Pressed - Küche on')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.122')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
+            
         if key3state == False:
-            print('Key3 Pressed - noch nichts')
+            updateDisplay('Key2 pressed - Wohnzimmer on')
+            print('Key3 Pressed - Wohnzi on')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.38')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
+            
         if key4state == False:
-            print('Key4 Pressed - Alles off')
-            updateDisplay('Key2 pressed - Alles off')
+            updateDisplay('Key2 pressed - Alles off geht noch nicht')
+            print('Key4 Pressed - Alles off geht noch nich')
             time.sleep(0.2)
 
 if __name__ == '__main__':
