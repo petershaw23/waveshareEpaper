@@ -19,8 +19,7 @@ epd.init()
 # Image with screen size
 #255: clear the image with white
 image = Image.new('1', (epd2in7.EPD_HEIGHT, epd2in7.EPD_WIDTH), 255)
-#Object image on which we will draw
-draw = ImageDraw.Draw(image)
+
 
 key1 = 5
 key2 = 6
@@ -46,6 +45,7 @@ fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 18) 
 
 
 def updateDisplay(string):
+    draw = ImageDraw.Draw(image)
     draw.text((5, 50), string, font = fontL, fill = 0)
     epd.display(epd.getbuffer(image))
  
