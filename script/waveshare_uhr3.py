@@ -13,6 +13,7 @@ import epd2in7 #lib fuer display
 import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
 import subprocess, os
+import time
 Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
@@ -76,6 +77,7 @@ humiPi1 = (jsonobj1["feeds"][0]["field5"])
 #humiPi1 = 'off'
 # d1 mini data
 #try:
+time.sleep(2)
 data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
 tempD1 = (jsonobj2["feeds"][0]["field1"])
