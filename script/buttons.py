@@ -90,6 +90,6 @@ def main():
             updateDisplay('Key2 pressed - Alles off geht noch nicht')
             print('Key4 Pressed - Alles off geht noch nich')
             time.sleep(0.2)
-
+GPIO.cleanup()
 if __name__ == '__main__':
     main()
