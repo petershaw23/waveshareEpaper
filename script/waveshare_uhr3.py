@@ -76,15 +76,15 @@ humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
 #tempPi1 = 'off'
 #humiPi1 = 'off'
 # d1 mini data
-#try:
-time.sleep(2)
-data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
-jsonobj2 = json.loads(data2.content.decode('utf-8'))
-tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
-humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
-#except:
-#    tempD1 = 'off'
-#    humiD1 = 'off'
+try:
+   time.sleep(2)
+    data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
+    jsonobj2 = json.loads(data2.content.decode('utf-8'))
+    tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
+    humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
+except:
+    tempD1 = 'off'
+    humiD1 = 'off'
 #calculate deltas
 try:
     deltaT = round(float(tempPi1) - float(tempD1))
