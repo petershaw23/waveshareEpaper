@@ -71,7 +71,7 @@ t = round(float(traw) / 1000)
 data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
 jsonobj1 = json.loads(data1.content.decode('utf-8'))
 tempPi1 = round(float(jsonobj1["feeds"][0]["field3"]), 1)
-humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]), 0)
+humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
 #except:
 #tempPi1 = 'off'
 #humiPi1 = 'off'
@@ -81,14 +81,14 @@ time.sleep(2)
 data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
 tempD1 = round(float(jsonobj2["feeds"][0]["field1"]), 1)
-humiD1 = round(float(jsonobj2["feeds"][0]["field2"]), 0)
+humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
 #except:
 #    tempD1 = 'off'
 #    humiD1 = 'off'
 #calculate deltas
 try:
     deltaT = round(float(tempPi1) - float(tempD1), 1)
-    deltaH = round(float(humiPi1) - float(humiD1), 0)
+    deltaH = round(float(humiPi1) - float(humiD1))
 except:
     deltaT = 'err'
     deltaH = 'err'
