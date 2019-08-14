@@ -61,6 +61,7 @@ def updateDisplay(string):
 def main():
 
     while True:
+        GPIO.setmode(GPIO.BCM)
         key1state = GPIO.input(key1)
         key2state = GPIO.input(key2)
         key3state = GPIO.input(key3)
