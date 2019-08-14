@@ -1,7 +1,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 print ('------------------------')
-#from datetime import datetime
+from datetime import datetime
 #import io
 import sys
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
