@@ -71,25 +71,25 @@ def main():
             print('Key1 Pressed - Schlafi on')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
-            
+            GPIO.cleanup()
         if key2state == False:
             updateDisplay('Key2 pressed - Küche on')
             print('Key2 Pressed - Küche on')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.122')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
-            
+            GPIO.cleanup()
         if key3state == False:
             updateDisplay('Key2 pressed - Wohnzimmer on')
             print('Key3 Pressed - Wohnzi on')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.38')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
             time.sleep(0.2)
-            
+            GPIO.cleanup()
         if key4state == False:
             updateDisplay('Key2 pressed - Alles off geht noch nicht')
             print('Key4 Pressed - Alles off geht noch nich')
             time.sleep(0.2)
-GPIO.cleanup()
+            GPIO.cleanup()
 if __name__ == '__main__':
     main()
