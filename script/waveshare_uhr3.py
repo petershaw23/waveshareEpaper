@@ -66,21 +66,30 @@ t = round(float(traw) / 1000)
 # temperatur und humidity von thingspeak channel holen
 
 # pi1 data
-data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
-jsonobj1 = json.loads(data1.content.decode('utf-8'))
-tempPi1 = (jsonobj1["feeds"][0]["field3"])
-humiPi1 = (jsonobj1["feeds"][0]["field5"])
-
+try:
+    data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
+    jsonobj1 = json.loads(data1.content.decode('utf-8'))
+    tempPi1 = (jsonobj1["feeds"][0]["field3"])
+    humiPi1 = (jsonobj1["feeds"][0]["field5"])
+except:
+    tempPi1 = 'off'
+    humiPi1 = 'off'
 # d1 mini data
-data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
-jsonobj2 = json.loads(data2.content.decode('utf-8'))
-tempD1 = (jsonobj2["feeds"][0]["field1"])
-humiD1 = (jsonobj2["feeds"][0]["field2"])
-
+try:
+    data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
+    jsonobj2 = json.loads(data2.content.decode('utf-8'))
+    tempD1 = (jsonobj2["feeds"][0]["field1"])
+    humiD1 = (jsonobj2["feeds"][0]["field2"])
+except:
+    tempD1 = 'off'
+    humiD1 = 'off'
 #calculate deltas
-deltaT = round(float(tempPi1) - float(tempD1), 3)
-deltaH = round(float(humiPi1) - float(humiD1), 3)
-
+try:
+    deltaT = round(float(tempPi1) - float(tempD1), 3)
+    deltaH = round(float(humiPi1) - float(humiD1), 3)
+except:
+    deltaT = 'err'
+    deltaH = 'err'
 print (str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+str(tempD1)+'°C  '+str(humiD1)+str('%    Δt: ' )+str(deltaT)+str('°C   ΔH: ' )+str(deltaH))
     
 # track ID via volumio REST api holen:
