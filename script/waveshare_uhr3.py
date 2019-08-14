@@ -117,7 +117,7 @@ fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) 
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 29) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) # font for bday2
-fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 16) # font for temp, humi, cpu_temp
+fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 17) # font for temp, humi, cpu_temp
 ########################################################################################################
 ##############
 #draw function
