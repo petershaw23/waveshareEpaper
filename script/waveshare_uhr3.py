@@ -3,6 +3,13 @@
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('------------------------')
 from datetime import datetime
+import thingspeak
+import io
+import sys
+import epd2in7 #lib fuer display
+import epdconfig #config fuer display
+from PIL import Image,ImageDraw,ImageFont
+import subprocess, os
 Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
@@ -46,34 +53,42 @@ except: #falls fehler
 print (gebStringNext)
 print (gebStringUeberNext)
 ###
-import io
+
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
 traw = f.readline ()
 t = round(float(traw) / 1000)
 ###
-import sys
+
 sys.path.append(r'/home/pi/script/waveshareEpaper/lib')
-import epd2in7 #lib fuer display
-import epdconfig #config fuer display
-from PIL import Image,ImageDraw,ImageFont
+
 ###
 # temperatur und humidity von thingspeak channel holen
 try:
-    import thingspeak
-    ch = thingspeak.Channel(647418)
-    outRAW = ch.get({'results':1})
-    outSplit = outRAW.split('\"')
-    outTemp = outSplit[-18]
-    outHumi = outSplit[-14]
+    chPi1 = thingspeak.Channel(647418)
+    outRAWPi1 = chPi1.get({'results':1})
+    outSplitPi1 = outRAWPi1.split('\"')
+    outTempPi1 = outSplitPi1[-18]
+    outHumiPi1 = outSplitPi1[-14]
+
+    chD1 = thingspeak.Channel(843073)
+    outRAWD1 = chD1.get({'results':1})
+    outSplitD1 = outRAWD1.split('\"')
+    outTempD1 = outSplitD1[-14]
+    outHumiD1 = outSplitD1[-10]
+    
+    deltaT = round(float(outTempPi1) - float(outTempD1), 1)
+    deltaH = round(float(outHumiPi1) - float(outHumiD1), 1)
+
 except: #falls offline
-    outTemp = '??'
-    outHumi = '??'
-print ('thingspeak: temp '+str(outTemp)+'  humidity: '+str(outHumi))
-
-
+    outTempPi1 = 'err'
+    outHumiPi1 = 'err'
+    outTempD1 = 'err'
+    outHumiD1 = 'err'
+    deltaT = 'err'
+    deltaH = 'err'
 
 # track ID via volumio REST api holen:
-import subprocess, os
+
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 (outputRAW, error) = trackid.communicate()
 if trackid.returncode != 0: #if offline
@@ -124,8 +139,8 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 159), str(t) +' °C', font = fontXS, fill = 0)       #CPU temp
-        draw.text((158, 159), str(outTemp)+'°C '+str(outHumi)+str('%'), font = fontXS, fill = 0) # Temp+Humidity
+        draw.text((0, 159), 'cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH), font = fontXS, fill = 0)       #CPU temp
+        #draw.text((158, 159), , font = fontXS, fill = 0) # Temp+Humidity
 
         #Update display
         epd.display(epd.getbuffer(image))
