@@ -88,6 +88,8 @@ except: #falls offline
     deltaT = 'err'
     deltaH = 'err'
 
+print('cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH)
+    
 # track ID via volumio REST api holen:
 
 trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
@@ -140,8 +142,8 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((0, 159), 'cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH), font = fontXS, fill = 0)       #CPU temp
-        #draw.text((158, 159), , font = fontXS, fill = 0) # Temp+Humidity
+        draw.text((0, 159), 'cpu: '+str(t)+'°C   out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH), font = fontXS, fill = 0)       #temps
+        
 
         #Update display
         epd.display(epd.getbuffer(image))
