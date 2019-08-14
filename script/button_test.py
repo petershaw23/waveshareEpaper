@@ -1,19 +1,9 @@
-import RPi.GPIO as GPIO
-
-def getPinFunctionName(pin):
-    functions = {GPIO.IN:'Input',
-                 GPIO.OUT:'Output',
-                 GPIO.I2C:'I2C',
-                 GPIO.SPI:'SPI',
-                 GPIO.HARD_PWM:'HARD_PWM',
-                 GPIO.SERIAL:'Serial',
-                 GPIO.UNKNOWN:'Unknown'}
-                 
-    return functions[GPIO.gpio_function(pin)]
-
-
-gpio = (2,3,4,7,8,9,10,11,14,15,17,18,22,23,24,25,27)
-
-GPIO.setmode(GPIO.BCM)
-for pin in gpio:
-    print("GPIO %s is an %s" % (pin,getPinFunctionName(pin)))
+import RPi.GPIO as GPIO # Import Raspberry Pi GPIO library
+def button_callback(channel):
+    print("Button was pushed!")
+#GPIO.setwarnings(False) # Ignore warning for now
+GPIO.setmode(GPIO.BCM) # Use physical pin numbering
+GPIO.setup(5, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin 10 to be an input pin and set initial value to be pulled low (off)
+GPIO.add_event_detect(5,GPIO.RISING,callback=button_callback) # Setup event on pin 10 rising edge
+message = input("Press enter to quit\n\n") # Run until someone presses enter
+GPIO.cleanup() # Clean up
