@@ -33,3 +33,6 @@ utc = UTC()
 
 delta = datetime.datetime.now(utc) - last_entry_D1_dt
 print (delta)
+sixminutes = datetime.timedelta(minutes=6)
+if delta > sixminutes:
+    print ('offline!')
