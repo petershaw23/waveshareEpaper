@@ -1,47 +1,22 @@
-import thingspeak
-###
-# temperatur und humidity von thingspeak channel holen
+import json
+import requests
+import http.client, urllib.parse
+data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
+jsonobj2 = json.loads(data2.content.decode('utf-8'))
 try:
-    chPi1 = thingspeak.Channel(647418)
-    outRAWPi1 = chPi1.get({'results':1})
-    chD1 = thingspeak.Channel(843073)
-    outRAWD1 = chD1.get({'results':1})
-except: #falls offline
-    outTempPi1 = 'off'
-    outHumiPi1 = 'off'
-    outTempD1 = 'off'
-    outHumiD1 = 'off'
-    deltaT = 'off'
-    deltaH = 'off'    
-    
-outSplitPi1 = outRAWPi1.split('\"')
-try:
-    outTempPi1 = outSplitPi1[-18]
+    tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
+    humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
+    last_entry_D1 = jsonobj2["channel"]["updated_at"]
 except:
-    outTempPi1 = 'err'
+    tempD1 = jsonobj2["feeds"][0]["field1"]
+    humiD1 = jsonobj2["feeds"][0]["field2"]
     
+#calculate deltas
 try:
-    outHumiPi1 = outSplitPi1[-14]
-except:
-    outHumiPi1 = 'err'
-   
-outSplitD1 = outRAWD1.split('\"')
-    
-try:
-    outTempD1 = outSplitD1[-14]
-except:
-    outTempD1 = 'err'
-try:
-    outHumiD1 = outSplitD1[-10]
-except: 
-    outTempD1 = 'err'
-    
-try:
-    deltaT = round(float(outTempPi1) - float(outTempD1), 2)
-    deltaH = round(float(outHumiPi1) - float(outHumiD1), 2)
+    deltaT = round(float(tempPi1) - float(tempD1))
+    deltaH = round(float(humiPi1) - float(humiD1))
 except:
     deltaT = 'err'
     deltaH = 'err'
-
-
-print ('out: '+str(outTempD1)+'°C  '+str(outHumiD1)+str('%    in: ')+str(outTempPi1)+'°C  '+str(outHumiPi1)+str('%    Delta t: ' )+str(deltaT)+str('°C   Delta H: ' )+str(deltaH))
+print (str(tempD1)+'°C  '+str(humiD1))
+print (str(last_entry_D1))
