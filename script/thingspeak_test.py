@@ -18,9 +18,9 @@ print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
 last_entry_D1_dt = parser.parse(last_entry_D1)
 
-ZERO = timedelta(0)
+ZERO = datetime.timedelta(0)
 
-class UTC(tzinfo):
+class UTC(datetime.tzinfo):
   def utcoffset(self, dt):
     return ZERO
   def tzname(self, dt):
