@@ -15,5 +15,5 @@ except:
 
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
-delta = last_entry_D1 - datetime.datetime()
+delta = last_entry_D1 - datetime.datetime.now()
 print (delta)
