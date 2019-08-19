@@ -1,6 +1,7 @@
 import json
 import requests
 import http.client, urllib.parse
+import datetime
 data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
 try:
@@ -14,3 +15,5 @@ except:
 
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
+delta = last_entry_D1 - datetime.datetime()
+print (delta)
