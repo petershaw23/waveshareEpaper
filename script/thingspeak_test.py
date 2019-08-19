@@ -17,5 +17,5 @@ except:
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
 last_entry_D1_dt = parser.parse(last_entry_D1)
-delta = last_entry_D1_dt - datetime.datetime.now()
+delta = last_entry_D1_dt - datetime.datetime.now(timezone.utc)
 print (delta)
