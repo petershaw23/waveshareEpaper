@@ -17,5 +17,18 @@ except:
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
 last_entry_D1_dt = parser.parse(last_entry_D1)
-delta = last_entry_D1_dt - datetime.datetime.now(timezone.utc)
+
+ZERO = timedelta(0)
+
+class UTC(tzinfo):
+  def utcoffset(self, dt):
+    return ZERO
+  def tzname(self, dt):
+    return "UTC"
+  def dst(self, dt):
+    return ZERO
+
+utc = UTC()
+
+delta = last_entry_D1_dt - datetime.datetime.now(utc)
 print (delta)
