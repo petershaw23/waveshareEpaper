@@ -31,5 +31,5 @@ class UTC(datetime.tzinfo):
 
 utc = UTC()
 
-delta = last_entry_D1_dt - datetime.datetime.now(utc)
+delta = datetime.datetime.now(utc) - last_entry_D1_dt
 print (delta)
