@@ -8,11 +8,11 @@ jsonobj2 = json.loads(data2.content.decode('utf-8'))
 try:
     tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
     humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
-    last_entry_D1 = jsonobj2["channel"]["updated_at"]
+    last_entry_D1 = jsonobj2["feeds"][0]["created_at"]
 except:
     tempD1 = jsonobj2["feeds"][0]["field1"]
     humiD1 = jsonobj2["feeds"][0]["field2"]
-    last_entry_D1 = jsonobj2["channel"]["updated_at"]
+    last_entry_D1 = jsonobj2["feeds"][0]["created_at"]
 
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
