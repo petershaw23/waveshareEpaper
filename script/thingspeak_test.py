@@ -10,13 +10,7 @@ try:
 except:
     tempD1 = jsonobj2["feeds"][0]["field1"]
     humiD1 = jsonobj2["feeds"][0]["field2"]
-    
-#calculate deltas
-try:
-    deltaT = round(float(tempPi1) - float(tempD1))
-    deltaH = round(float(humiPi1) - float(humiD1))
-except:
-    deltaT = 'err'
-    deltaH = 'err'
+    last_entry_D1 = jsonobj2["channel"]["updated_at"]
+
 print (str(tempD1)+'°C  '+str(humiD1))
 print (str(last_entry_D1))
