@@ -88,7 +88,7 @@ except: #if entry is Null
 # time conversion of last entry, check if its older than 6 minutes (indicates f.ex. emtpy battery of D1 sensor)    
 last_entry_D1_dt = parser.parse(last_entry_D1)   
 
-ZERO = timedelta(0)
+ZERO = datetime.timedelta(0)
 class UTC(tzinfo):
   def utcoffset(self, dt):
     return ZERO
@@ -99,7 +99,7 @@ class UTC(tzinfo):
 utc = UTC()
 delta = datetime.now(utc) - last_entry_D1_dt
 print (delta)
-sixminutes = timedelta(minutes=6)
+sixminutes = datetime.timedelta(minutes=6)
 if delta < sixminutes:
     print ('alles i.O!')
     d1_status_indicator = str('√')
