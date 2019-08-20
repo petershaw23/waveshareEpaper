@@ -100,10 +100,10 @@ delta = datetime.datetime.now(utc) - last_entry_D1_dt
 print (delta)
 sixminutes = datetime.timedelta(minutes=6)
 if delta < sixminutes:
-    print ('alles i.O!')
+    print ('D1 status indicator: √')
     d1_status_indicator = str('√')
 if delta > sixminutes:
-    print ('offline')
+    print ('D1 status indicator: X')
     d1_status_indicator = str('X')
 
 #calculate deltaT and deltaH
