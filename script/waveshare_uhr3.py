@@ -13,6 +13,7 @@ import epd2in7 #lib fuer display
 import epdconfig #config fuer display
 from PIL import Image,ImageDraw,ImageFont
 import subprocess, os
+from dateutil import parser
 import time
 Datum = datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.now().strftime('%H:%M')
@@ -67,26 +68,46 @@ t = round(float(traw) / 1000)
 # temperatur und humidity von thingspeak channel holen
 
 # pi1 data
-#try:
 data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
 jsonobj1 = json.loads(data1.content.decode('utf-8'))
 tempPi1 = round(float(jsonobj1["feeds"][0]["field3"]))
 humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
-#except:
-#tempPi1 = 'off'
-#humiPi1 = 'off'
-# d1 mini data
 
-#time.sleep(2)
+# d1 mini data
 data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
 try:
     tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
     humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
-except:
-    tempD1 = jsonobj2["feeds"][0]["field1"]
-    humiD1 = jsonobj2["feeds"][0]["field2"]
-#calculate deltas
+    last_entry_D1 = jsonobj2["feeds"][0]["created_at"] #time of last entry
+except: #if entry is Null
+    tempD1 = jsonobj2["feeds"][0]["field1"] #displays the field entry (e.g. null)
+    humiD1 = jsonobj2["feeds"][0]["field2"] #displays the field entry (e.g. null)
+    last_entry_D1 = jsonobj2["feeds"][0]["created_at"] #same as in try
+
+# time conversion of last entry, check if its older than 6 minutes (indicates f.ex. emtpy battery of D1 sensor)    
+last_entry_D1_dt = parser.parse(last_entry_D1)   
+
+ZERO = datetime.timedelta(0)
+class UTC(datetime.tzinfo):
+  def utcoffset(self, dt):
+    return ZERO
+  def tzname(self, dt):
+    return "UTC"
+  def dst(self, dt):
+    return ZERO
+utc = UTC()
+delta = datetime.datetime.now(utc) - last_entry_D1_dt
+print (delta)
+sixminutes = datetime.timedelta(minutes=6)
+if delta < sixminutes:
+    print ('alles i.O!')
+    d1_status_indicator = str('√')
+if delta > sixminutes:
+    print ('offline')
+    d1_status_indicator = str('X')
+
+#calculate deltaT and deltaH
 try:
     deltaT = round(float(tempPi1) - float(tempD1))
     deltaH = round(float(humiPi1) - float(humiD1))
@@ -148,6 +169,7 @@ def main():
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
         draw.text((120, 110), str(t),font = fontXS, fill = 0)             #cpu temp
+        draw.text((120, 120), str(d1_status_indicator),font = fontXS, fill = 0)             #D1 Status Indicator (X or √)
         draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
         
 
