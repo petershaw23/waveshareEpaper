@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 #uhr v3 by petershaw23 - shows time, date, google calendar current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('------------------------')
-from datetime import datetime
+import datetime
 import json
 import requests
 import http.client, urllib.parse
@@ -15,8 +15,8 @@ from PIL import Image,ImageDraw,ImageFont
 import subprocess, os
 from dateutil import parser
 import time
-Datum = datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.now().strftime('%H:%M')
+Datum = datetime.datetime.now().strftime('%-d.%-m.')
+Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 # google API get bdays
 try:
@@ -27,8 +27,8 @@ try:
         next_geb = list[0] #the first list entry
         next_geb_dateRaw = (next_geb[0])
         next_geb_name = (next_geb[1])
-        next_geb_date = datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-        deltaRawNext = next_geb_date - datetime.now()
+        next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
+        deltaRawNext = next_geb_date - datetime.datetime.now()
         deltaNext = (deltaRawNext.days + 1)
         if deltaNext == 0:
             gebStringNext = str(next_geb_name)+str('!')
@@ -42,8 +42,8 @@ try:
         uebernext_geb = list[1] #the next after the first one
         uebernext_geb_dateRaw = (uebernext_geb[0])
         uebernext_geb_name = (uebernext_geb[1])
-        uebernext_geb_date = datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
-        deltaRawUeberNext = uebernext_geb_date - datetime.now()
+        uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
+        deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
         deltaUeberNext = (deltaRawUeberNext.days + 1)
         if deltaUeberNext == 1:
             gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
@@ -87,9 +87,8 @@ except: #if entry is Null
 
 # time conversion of last entry, check if its older than 6 minutes (indicates f.ex. emtpy battery of D1 sensor)    
 last_entry_D1_dt = parser.parse(last_entry_D1)   
-
 ZERO = datetime.timedelta(0)
-class UTC(tzinfo):
+class UTC(datetime.tzinfo):
   def utcoffset(self, dt):
     return ZERO
   def tzname(self, dt):
@@ -97,7 +96,7 @@ class UTC(tzinfo):
   def dst(self, dt):
     return ZERO
 utc = UTC()
-delta = datetime.now(utc) - last_entry_D1_dt
+delta = datetime.datetime.now(utc) - last_entry_D1_dt
 print (delta)
 sixminutes = datetime.timedelta(minutes=6)
 if delta < sixminutes:
