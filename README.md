@@ -20,7 +20,7 @@ short write up on https://peter-shaw.de/en/2019/07/diy-e-paper-display-with-rasp
 
 ## display layout (webcam pic):
 
-![alt text](https://peter-shaw.de/test.jpeg "Webcam Shot")
+![alt text](https://peter-shaw.de/waveshare.jpg "layout")
 
 
 ## google calendar api 
