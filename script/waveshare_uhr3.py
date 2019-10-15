@@ -134,7 +134,7 @@ print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 107) # font for time
-fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 33) # font for date
+fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 32) # font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 28) # font for bday1
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) # font for bday2
@@ -156,7 +156,7 @@ def main():
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -8), str(Datum)+str(' ')+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
+        draw.text((0, -7), str(Datum)+str(' ')+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
         draw.line((5, 26, 259, 26), fill = 0)
         draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
