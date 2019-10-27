@@ -19,42 +19,42 @@ Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 # google API get bdays
-try:
-    import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
-    list = gcallite2.list #call list from imported file
+#try:
+#    import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
+#    list = gcallite2.list #call list from imported file
     
-    try:
-        next_geb = list[0] #the first list entry
-        next_geb_dateRaw = (next_geb[0])
-        next_geb_name = (next_geb[1])
-        next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-        deltaRawNext = next_geb_date - datetime.datetime.now()
-        deltaNext = (deltaRawNext.days + 1)
-        if deltaNext == 0:
-            gebStringNext = str(next_geb_name)+str('!')
-        elif deltaNext == 1:
-            gebStringNext = ('mrgn: '+str(next_geb_name))
-        else:
-            gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
-    except:
-        gebStringNext = (' ')
-    try:
-        uebernext_geb = list[1] #the next after the first one
-        uebernext_geb_dateRaw = (uebernext_geb[0])
-        uebernext_geb_name = (uebernext_geb[1])
-        uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
-        deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
-        deltaUeberNext = (deltaRawUeberNext.days + 1)
-        if deltaUeberNext == 1:
-            gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
-        else:
-            gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
-    except:
-        gebStringUeberNext = (' ')
+ #   try:
+ #       next_geb = list[0] #the first list entry
+#        next_geb_dateRaw = (next_geb[0])
+ #       next_geb_name = (next_geb[1])
+  #      next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
+   #     deltaRawNext = next_geb_date - datetime.datetime.now()
+   #     deltaNext = (deltaRawNext.days + 1)
+    #    if deltaNext == 0:
+    #        gebStringNext = str(next_geb_name)+str('!')
+    #    elif deltaNext == 1:
+     #       gebStringNext = ('mrgn: '+str(next_geb_name))
+     #   else:
+      #      gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
+  #  except:
+   #     gebStringNext = (' ')
+  #  try:
+ #       uebernext_geb = list[1] #the next after the first one
+  #      uebernext_geb_dateRaw = (uebernext_geb[0])
+  #      uebernext_geb_name = (uebernext_geb[1])
+  #      uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
+  #      deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
+  #      deltaUeberNext = (deltaRawUeberNext.days + 1)
+  #      if deltaUeberNext == 1:
+  #          gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
+  #      else:
+  #          gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
+  #  except:
+   #     gebStringUeberNext = (' ')
 
-except: #falls fehler
-    gebStringNext = 'error in gcallite.py'
-    gebStringUeberNext = 'error in gcallite.py'
+#except: #falls fehler
+gebStringNext = '--'
+gebStringUeberNext = '--'
 print (gebStringNext)
 print (gebStringUeberNext)
 ###
