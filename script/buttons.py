@@ -82,7 +82,7 @@ def main():
         if key4state == False:
             updateDisplay('next')
             print('4 next track')
-            curl http://192.168.0.241/api/v1/commands/?cmd=next
+            os.system('curl http://192.168.0.241/api/v1/commands/?cmd=next')
             time.sleep(0.2)
             
 if __name__ == '__main__':
