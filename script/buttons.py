@@ -62,26 +62,27 @@ def main():
         if key1state == False:
             updateDisplay('Schlafzimmer on')
             print('1 Schlafi on')
-            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.136')
             time.sleep(0.2)
             
         if key2state == False:
             updateDisplay('Küche on')
             print('2 Küche on')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.122')
-            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.136')
             time.sleep(0.2)
            
         if key3state == False:
             updateDisplay('Wohnzimmer on')
             print('3 Wohnzimmer on')
             os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.38')
-            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.227')
+            os.system('/home/pi/hs100/hs100.sh on -i 192.168.0.136')
             time.sleep(0.2)
             
         if key4state == False:
-            updateDisplay('Alles off geht noch nicht')
-            print('4 Alles off geht noch nich')
+            updateDisplay('next')
+            print('4 next track')
+            curl http://192.168.0.143/api/v1/commands/?cmd=next
             time.sleep(0.2)
             
 if __name__ == '__main__':
