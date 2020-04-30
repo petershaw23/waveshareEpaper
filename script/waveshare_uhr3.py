@@ -15,6 +15,8 @@ from PIL import Image,ImageDraw,ImageFont
 import subprocess, os
 from dateutil import parser
 import time
+import sendmail #sendmail.py to send email alerts
+emailAlert()
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
@@ -105,7 +107,7 @@ if delta < sixminutes:
 if delta > sixminutes:
     print ('D1 status indicator: X')
     d1_status_indicator = str('X')
-
+    
 #calculate deltaT and deltaH
 try:
     deltaT = round(float(tempPi1) - float(tempD1))
