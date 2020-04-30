@@ -16,7 +16,7 @@ import subprocess, os
 from dateutil import parser
 import time
 import sendmail #sendmail.py to send email alerts
-emailAlert()
+sendmail.emailAlert()
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
