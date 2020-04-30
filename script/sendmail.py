@@ -11,7 +11,7 @@ replyto="petershawiot@gmail.com" # where a reply to will go
 sendto=["michael.budjan@gmail.com"] # list to send to
 sendtoShow="petershawiot@gmail.com" # what shows on the email as send to
 subject="Test from pysmtp" # subject line
-content=”Hello, this is a test of the system.\nHows it going\nMe” # content 
+content="Hello, this is a test of the system.\nHows it going\nMe" # content 
 # compose the email. probably should use the email python module
 mailtext="From: "+replyto+"\nTo: "+sendtoShow+"\n"
 mailtext=mailtext+"Subject:"+subject+"\n"+content
