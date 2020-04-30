@@ -12,8 +12,8 @@ def emailAlert():
     replyto="petershawiot@gmail.com" # where a reply to will go
     sendto=["michael.budjan@gmail.com"] # list to send to
     sendtoShow="petershawiot@gmail.com" # what shows on the email as send to
-    subject="Test from pysmtp" # subject line
-    content="Hello, this is a test of the system.\nHows it going\nMe" # content 
+    subject="Alert from waveshare uhr" # subject line
+    content="Hello, something is wrong with wave share uhr\nfix that sh1t\npsw" # content 
     # compose the email. probably should use the email python module
     mailtext="From: "+replyto+"\nTo: "+sendtoShow+"\n"
     mailtext=mailtext+"Subject:"+subject+"\n"+content
