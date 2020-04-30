@@ -1,5 +1,5 @@
 import smtplib
-def emailAlert()
+def emailAlert():
     # start talking to the SMTP server for Gmail
     s = smtplib.SMTP("smtp.gmail.com", 587)
     s.starttls()
