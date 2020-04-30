@@ -26,6 +26,9 @@ short write up on https://michaelbudjan.de/en/2019/07/diy-e-paper-display-with-r
 ## google calendar api 
 api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
 
+## email alert
+implemented an email alert (sendmail.py)
+
 ## cronjob looks like this:
 <code>crontab -e</code><br>
 <code>* * * * * /home/pi/script/waveshareEpaper/script/exec.sh >> /home/pi/script/waveshareEpaper/clocklog2.txt 2>&1</code>
