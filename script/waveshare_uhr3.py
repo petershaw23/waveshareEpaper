@@ -119,7 +119,7 @@ print (str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+s
     
 # track ID via volumio REST api holen:
 
-trackid = subprocess.Popen("curl 192.168.0.241/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+trackid = subprocess.Popen("curl 192.168.0.164/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
 (outputRAW, error) = trackid.communicate()
 if trackid.returncode != 0: #if offline
    artist = ' '
