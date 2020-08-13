@@ -15,7 +15,7 @@ in3daysRaw = datetime.now() + timedelta(days=3)
 in3days = in3daysRaw.strftime('%d.%m') 
 
 in4daysRaw = datetime.now() + timedelta(days=4)
-in3days = in3daysRaw.strftime('%d.%m') 
+in4days = in4daysRaw.strftime('%d.%m') 
 
 gebToday = " "
 gebTomorrow = " "
