@@ -7,7 +7,9 @@ for line in fileName:
     if today in line: 
         line = line.split(' ') 
         flag = 1
-        print("Birthdays Today: " + line[1]) 
+        
         gebToday = line[1]
-    if flag == 0: 
-        print("No Birthdays Today!") 
+        print("Birthdays Today: " + gebToday)
+    if flag == 0:
+        gebToday = "No Birthdays Today!"
+        print(gebToday) 
