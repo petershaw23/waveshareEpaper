@@ -1,26 +1,26 @@
-import time
-import datetime
+
 from datetime import timedelta
+from datetime import datetime
 
-Datum = datetime.datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.datetime.now().strftime('%H:%M')
-print (Datum, Uhrzeit)
-
-
-#manual calendar, to not be reliant on google api
 fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
 today = time.strftime('%d.%m')
-tomorrow = datetime.now() + timedelta(days=1)  
+tomorrowRaw = datetime.now() + timedelta(days=1) 
+tomorrow = tomorrowRaw.strftime('%d.%m') 
+print (today)
 print (tomorrow)
 flag = 0
 for line in fileName: 
     if today in line: 
         line = line.split(' ') 
         flag = 1
-        
-        gebToday = line[1]
-        print("Birthdays Today: " + gebToday)
+    if tomorrow in line:
+        line = line.split(' ')
+        flag = 2
+        gebTomorrow = line[1]
+        print("Birthdays Tomorrow: " + gebTomorrow)
     if flag == 0:
         gebToday = " "
-        print(gebToday) 
+        gebTomorrow = " "
+        print(gebToday)
+        
     
