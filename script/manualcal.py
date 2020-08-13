@@ -16,7 +16,7 @@ in3days = in3daysRaw.strftime('%d.%m')
 
 in4daysRaw = datetime.now() + timedelta(days=4)
 in4days = in4daysRaw.strftime('%d.%m') 
-
+geb = ""
 count = 0
 
 for line in fileName: 
