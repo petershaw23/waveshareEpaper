@@ -14,4 +14,4 @@ for line in fileName:
         # line[1] contains Name and line[2] contains Surname 
         print("Birthdays Today: " + line[1])
         if flag == 0: 
-        print("No Birthdays Today!") 
+            print("No Birthdays Today!") 
