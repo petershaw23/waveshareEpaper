@@ -22,7 +22,7 @@ print (Datum, Uhrzeit)
 
 
 #manual calendar, to not be reliant on google api
-fileName = open("geburtstage.txt", 'r') 
+fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
 today = time.strftime('%d.%m')
 flag = 0
 for line in fileName: 
