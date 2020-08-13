@@ -1,5 +1,8 @@
 #manual calendar, to not be reliant on google api
 import time 
+Datum = datetime.datetime.now().strftime('%-d.%-m.')
+Uhrzeit = datetime.datetime.now().strftime('%H:%M')
+print (Datum, Uhrzeit)
 List = open("geburtstage.txt").readlines()
 next_geb = List[0] #the first list entry
 print (next_geb)
