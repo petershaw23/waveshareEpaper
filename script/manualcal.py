@@ -1,5 +1,6 @@
 import time
 import datetime
+from datetime import timedelta
 
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
