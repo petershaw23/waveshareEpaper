@@ -157,8 +157,7 @@ def main():
         #draw.line((0, 77, 264, 77), fill = 0)
         draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
         draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((120, 110), str(t),font = fontXS, fill = 0)             #cpu temp
-        draw.text((121, 125), str(d1_status_indicator),font = fontXS, fill = 0)             #D1 Status Indicator (X or √)
+        draw.text((120, 110), str(t),font = fontXS, fill = 0)             #cpu temp   
         draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
         
 
