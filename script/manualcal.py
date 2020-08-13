@@ -7,7 +7,7 @@ Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 
 
-List = open('geburtstage.txt').read().splitlines()
+List = open('geburtstage.txt').read().split(',')
 next_geb = List[0] #the first list entry
 print (next_geb)
 next_geb_dateRaw = (next_geb[0])
