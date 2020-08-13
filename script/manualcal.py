@@ -1,7 +1,7 @@
 import time
 #manual calendar, to not be reliant on google api
 fileName = open("geburtstage.txt", 'r') 
-today = time.strftime('%m%d') 
+today = time.strftime('%d%m') 
 flag = 0
 for line in fileName: 
     if today in line: 
