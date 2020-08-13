@@ -3,6 +3,8 @@
 #uhr v3 by petershaw23 - shows time, date, current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('------------------------')
 import datetime
+from datetime import timedelta
+from datetime import datetime
 import json
 import requests
 import http.client, urllib.parse
@@ -23,18 +25,50 @@ print (Datum, Uhrzeit)
 
 #manual calendar, to not be reliant on google api
 fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
-today = time.strftime('%d.%m')
-flag = 0
+today = datetime.now().strftime('%d.%m')
+tomorrowRaw = datetime.now() + timedelta(days=1)
+tomorrow = tomorrowRaw.strftime('%d.%m') 
+in2daysRaw = datetime.now() + timedelta(days=2)
+in2days = in2daysRaw.strftime('%d.%m') 
+in3daysRaw = datetime.now() + timedelta(days=3)
+in3days = in3daysRaw.strftime('%d.%m') 
+in4daysRaw = datetime.now() + timedelta(days=4)
+in4days = in4daysRaw.strftime('%d.%m') 
+countdown = ""
+geb = ""
+count = 0
+
 for line in fileName: 
-    if today in line: 
+    if today in line and count == 0: 
         line = line.split(' ') 
-        flag = 1
-        
-        gebToday = line[1]
-        print("Birthdays Today: " + gebToday)
-    if flag == 0:
-        gebToday = " "
-        print(gebToday) 
+        geb = line[1]
+        countdown = "heute: "
+        print(str(countdown) + str(geb))
+        count +=1
+    if tomorrow in line and count == 0:
+        line = line.split(' ')
+        geb = line[1]
+        countdown = "mrgn: "
+        print(str(countdown) + str(geb))
+        count +=1
+    if in2days in line and count == 0:
+        line = line.split(' ')
+        geb = line[1]
+        countdown = "t-2: "
+        print(str(countdown) + str(geb))
+        count +=1
+    if in3days in line and count == 0:
+        line = line.split(' ')
+        geb = line[1]
+        countdown = "t-3: "
+        print(str(countdown) + str(geb))
+        count +=1
+    if in4days in line and count == 0:
+        line = line.split(' ')
+        geb = line[1]
+        countdown = "t-4: "
+        print(str(countdown) + str(geb))
+        count +=1
     
 
 
@@ -133,7 +167,7 @@ def main():
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -7), str(Datum)+str(' ')+str(gebToday), font = fontXL, fill = 0)              # Date + next bday
+        draw.text((0, -7), str(Datum)+str(' ')+str(countdown)+str(geb), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
         draw.line((5, 26, 259, 26), fill = 0)
         #### draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
