@@ -24,7 +24,7 @@ gebin3days = " "
 gebin4days = " "
 countdown = " "  
 
-count = 1
+count = 0
 
 for line in fileName: 
     if today in line: 
@@ -54,7 +54,7 @@ for line in fileName:
         print("Birthday in 4 days: " + gebin4days)
         count +=1
         
-    print (count)
+print (count)
   
 
    
