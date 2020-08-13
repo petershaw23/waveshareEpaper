@@ -9,7 +9,7 @@ import os
 # Birthdays should be written in this file in 
 # the format: "MonthDay Name Surname" (Without Quotes) 
   
-birthdayFile = '/path/to/birthday/file'
+birthdayFile = 'geburtstage.txt'
   
 def checkTodaysBirthdays(): 
     fileName = open(birthdayFile, 'r') 
