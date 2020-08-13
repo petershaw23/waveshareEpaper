@@ -24,29 +24,37 @@ gebin3days = " "
 gebin4days = " "
 countdown = " "  
 
+count = 1
+
 for line in fileName: 
     if today in line: 
         line = line.split(' ') 
         gebToday = line[1]
         countdown = "heute: "
         print(str(countdown) + str(gebToday))
+        count +=1
     if tomorrow in line:
         line = line.split(' ')
         gebTomorrow = line[1]
         print("Birthday Tomorrow: " + gebTomorrow)
+        count +=1
     if in2days in line:
         line = line.split(' ')
         gebin2days = line[1]
         print("Birthday in 2 days: " + gebin2days)
+        count +=1
     if in3days in line:
         line = line.split(' ')
         gebin3days = line[1]
         print("Birthday in 3 days: " + gebin3days)
+        count +=1
     if in4days in line:
         line = line.split(' ')
         gebin4days = line[1]
         print("Birthday in 4 days: " + gebin4days)
+        count +=1
         
+    print (count)
   
 
    
