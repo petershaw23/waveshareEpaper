@@ -33,58 +33,17 @@ for line in fileName:
         gebToday = line[1]
         print("Birthdays Today: " + gebToday)
     if flag == 0:
-        gebToday = "No Birthdays Today!"
+        gebToday = " "
         print(gebToday) 
     
-    
-#    try:
-#        next_geb = list[0] #the first list entry
-#        next_geb_dateRaw = (next_geb[0])
-#        next_geb_name = (next_geb[1])
-#        next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-#        deltaRawNext = next_geb_date - datetime.datetime.now()
-#        deltaNext = (deltaRawNext.days + 1)
-#        if deltaNext == 0:
-#            gebStringNext = str(next_geb_name)+str('!')
-#        elif deltaNext == 1:
-#            gebStringNext = ('mrgn: '+str(next_geb_name))
-#        else:
-#            gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
-#    except:
-#        gebStringNext = (' ')
-#    try:
-#        uebernext_geb = list[1] #the next after the first one
-#        uebernext_geb_dateRaw = (uebernext_geb[0])
-#        uebernext_geb_name = (uebernext_geb[1])
-#        uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
-#        deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
-#        deltaUeberNext = (deltaRawUeberNext.days + 1)
-#        if deltaUeberNext == 1:
-#            gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
-#        else:
-#            gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
-#    except:
-#        gebStringUeberNext = (' ')
-#
-#except: #falls fehler
-#    gebStringNext = '--'
-#    gebStringUeberNext = '--'
-#print (gebStringNext)
-#print (gebStringUeberNext)
-###
-
-
-
 
 
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
 traw = f.readline ()
 t = round(float(traw) / 1000)
-###
 
-###
+
 # temperatur und humidity von thingspeak channel holen
-
 # pi1 data
 data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
 jsonobj1 = json.loads(data1.content.decode('utf-8'))
