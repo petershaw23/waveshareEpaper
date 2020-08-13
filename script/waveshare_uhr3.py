@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 #uhr v3 by petershaw23 - shows time, date, current bday, current volumio song, CPU temp, temp+humidity via thingspeak channel
 print ('------------------------')
-import datetime
+#import datetime
 from datetime import timedelta
 from datetime import datetime
 import json
@@ -18,8 +18,8 @@ import subprocess, os
 from dateutil import parser
 import time
 
-Datum = datetime.datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.datetime.now().strftime('%H:%M')
+Datum = datetime.now().strftime('%-d.%-m.')
+Uhrzeit = datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
 
 
