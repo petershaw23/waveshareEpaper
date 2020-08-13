@@ -14,6 +14,8 @@ for line in fileName:
     if today in line: 
         line = line.split(' ') 
         flag = 1
+        gebToday = line[1]
+        print("Birthdays Tomorrow: " + gebTomorrow)
     if tomorrow in line:
         line = line.split(' ')
         flag = 2
