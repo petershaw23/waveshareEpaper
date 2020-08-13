@@ -1,3 +1,5 @@
+import time
+import 
 #manual calendar, to not be reliant on google api
 fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
 today = time.strftime('%d.%m')
