@@ -20,46 +20,51 @@ import sendmail #sendmail.py to send email alerts
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
-# google API get bdays
-try:
-    import gcallite2 #imports gcallite2.py from same directory. if this script is executed via cronjob, check env. settings! or use attached bash file "exec.sh" to oauth instead
-    list = gcallite2.list #call list from imported file
-    
-    try:
-        next_geb = list[0] #the first list entry
-        next_geb_dateRaw = (next_geb[0])
-        next_geb_name = (next_geb[1])
-        next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
-        deltaRawNext = next_geb_date - datetime.datetime.now()
-        deltaNext = (deltaRawNext.days + 1)
-        if deltaNext == 0:
-            gebStringNext = str(next_geb_name)+str('!')
-        elif deltaNext == 1:
-            gebStringNext = ('mrgn: '+str(next_geb_name))
-        else:
-            gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
-    except:
-        gebStringNext = (' ')
-    try:
-        uebernext_geb = list[1] #the next after the first one
-        uebernext_geb_dateRaw = (uebernext_geb[0])
-        uebernext_geb_name = (uebernext_geb[1])
-        uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
-        deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
-        deltaUeberNext = (deltaRawUeberNext.days + 1)
-        if deltaUeberNext == 1:
-            gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
-        else:
-            gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
-    except:
-        gebStringUeberNext = (' ')
 
-except: #falls fehler
-    gebStringNext = '--'
-    gebStringUeberNext = '--'
-print (gebStringNext)
-print (gebStringUeberNext)
+
+import manualcal
+gebToday = gebToday.manualcal
+    
+    
+#    try:
+#        next_geb = list[0] #the first list entry
+#        next_geb_dateRaw = (next_geb[0])
+#        next_geb_name = (next_geb[1])
+#        next_geb_date = datetime.datetime.strptime(next_geb_dateRaw, '%Y-%m-%d')
+#        deltaRawNext = next_geb_date - datetime.datetime.now()
+#        deltaNext = (deltaRawNext.days + 1)
+#        if deltaNext == 0:
+#            gebStringNext = str(next_geb_name)+str('!')
+#        elif deltaNext == 1:
+#            gebStringNext = ('mrgn: '+str(next_geb_name))
+#        else:
+#            gebStringNext = ('t-' +str(deltaNext) +': ' +str(next_geb_name)) 
+#    except:
+#        gebStringNext = (' ')
+#    try:
+#        uebernext_geb = list[1] #the next after the first one
+#        uebernext_geb_dateRaw = (uebernext_geb[0])
+#        uebernext_geb_name = (uebernext_geb[1])
+#        uebernext_geb_date = datetime.datetime.strptime(uebernext_geb_dateRaw, '%Y-%m-%d')
+#        deltaRawUeberNext = uebernext_geb_date - datetime.datetime.now()
+#        deltaUeberNext = (deltaRawUeberNext.days + 1)
+#        if deltaUeberNext == 1:
+#            gebStringUeberNext = ('mrgn: '+str(uebernext_geb_name))
+#        else:
+#            gebStringUeberNext = ('t-'+str(deltaUeberNext)+': '+str(uebernext_geb_name))
+#    except:
+#        gebStringUeberNext = (' ')
+#
+#except: #falls fehler
+#    gebStringNext = '--'
+#    gebStringUeberNext = '--'
+#print (gebStringNext)
+#print (gebStringUeberNext)
 ###
+
+
+
+
 
 f = open("/sys/class/thermal/thermal_zone0/temp", "r") #raspberry pi CPU temp
 traw = f.readline ()
@@ -158,10 +163,10 @@ def main():
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -7), str(Datum)+str(' ')+str(gebStringNext), font = fontXL, fill = 0)              # Date + next bday
+        draw.text((0, -7), str(Datum)+str(' ')+str(gebToday), font = fontXL, fill = 0)              # Date + next bday
         #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
         draw.line((5, 26, 259, 26), fill = 0)
-        draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
+        #### draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
         #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
         #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
         #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
