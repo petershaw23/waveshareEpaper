@@ -26,29 +26,24 @@ gebin4days = " "
 for line in fileName: 
     if today in line: 
         line = line.split(' ') 
-   
         gebToday = line[1]
         print("Birthday Today: " + gebToday)
     if tomorrow in line:
         line = line.split(' ')
-     
         gebTomorrow = line[1]
         print("Birthday Tomorrow: " + gebTomorrow)
     if in2days in line:
         line = line.split(' ')
-
         gebin2days = line[1]
         print("Birthday in 2 days: " + gebin2days)
     if in3days in line:
         line = line.split(' ')
-
         gebin3days = line[1]
         print("Birthday in 3 days: " + gebin3days)
     if in4days in line:
         line = line.split(' ')
-
         gebin4days = line[1]
-        print("Birthday in 3 days: " + gebin4days)
+        print("Birthday in 4 days: " + gebin4days)
         
   
 
