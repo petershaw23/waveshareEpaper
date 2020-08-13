@@ -17,6 +17,7 @@ in3days = in3daysRaw.strftime('%d.%m')
 in4daysRaw = datetime.now() + timedelta(days=4)
 in4days = in4daysRaw.strftime('%d.%m') 
 
+geb = " "
 gebToday = " "
 gebTomorrow = " "
 gebin2days = " "
@@ -29,9 +30,9 @@ count = 0
 for line in fileName: 
     if today in line and count == 0: 
         line = line.split(' ') 
-        gebToday = line[1]
+        geb = line[1]
         countdown = "heute: "
-        print(str(countdown) + str(gebToday))
+        print(str(countdown) + str(geb))
         count +=1
     if tomorrow in line and count == 0:
         line = line.split(' ')
