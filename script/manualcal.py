@@ -1,15 +1,15 @@
 
-import time
 from datetime import timedelta
 from datetime import datetime
 
 fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
-today = time.strftime('%d.%m')
+today = datetime.now().strftime('%d.%m')
 tomorrowRaw = datetime.now() + timedelta(days=1) 
 tomorrow = tomorrowRaw.strftime('%d.%m') 
 print (today)
 print (tomorrow)
 flag = 0
+
 for line in fileName: 
     if today in line: 
         line = line.split(' ') 
