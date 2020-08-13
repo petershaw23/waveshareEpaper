@@ -22,12 +22,14 @@ gebTomorrow = " "
 gebin2days = " "
 gebin3days = " "
 gebin4days = " "
+countdown = " "  
 
 for line in fileName: 
     if today in line: 
         line = line.split(' ') 
         gebToday = line[1]
-        print("Birthday Today: " + gebToday)
+        countdown = "heute: "
+        print(str(countdown) + str(gebToday))
     if tomorrow in line:
         line = line.split(' ')
         gebTomorrow = line[1]
