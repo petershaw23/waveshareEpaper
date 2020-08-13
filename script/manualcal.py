@@ -1,3 +1,4 @@
+import time
 #manual calendar, to not be reliant on google api
 fileName = open("geburtstage.txt", 'r') 
 today = time.strftime('%m%d') 
