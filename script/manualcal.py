@@ -1,5 +1,5 @@
 #manual calendar, to not be reliant on google api
-fileName = open(birthdayFile, 'r') 
+fileName = open("geburtstage.txt", 'r') 
 today = time.strftime('%m%d') 
 flag = 0
 for line in fileName: 
