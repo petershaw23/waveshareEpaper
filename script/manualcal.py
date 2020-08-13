@@ -1,5 +1,7 @@
+from datetime import datetime
+
 with open('geburtstage.txt') as f:
     lines = [line.rstrip() for line in f]
     
 print (lines)
-print (lines[1])
+dates_list = [dt.datetime.strptime(date, "%d.%m").date() for date in lines]
