@@ -1,5 +1,6 @@
 #manual calendar, to not be reliant on google api
 import time 
+import datetime
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
 Uhrzeit = datetime.datetime.now().strftime('%H:%M')
 print (Datum, Uhrzeit)
