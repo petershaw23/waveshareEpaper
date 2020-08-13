@@ -20,7 +20,7 @@ def checkTodaysBirthdays():
             line = line.split(' ') 
             flag =1
             # line[1] contains Name and line[2] contains Surname 
-            print("Birthdays Today: ' + line[1]+ ' ' + line[2] + '"') 
+            print("Birthdays Today: ' + line[1]') 
     if flag == 0: 
             print("No Birthdays Today!"') 
   
