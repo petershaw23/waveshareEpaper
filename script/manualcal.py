@@ -1,14 +1,11 @@
 #manual calendar, to not be reliant on google api
-import time 
-import datetime
-from dateutil import parser
-Datum = datetime.datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.datetime.now().strftime('%H:%M')
-print (Datum, Uhrzeit)
-
-
-List = open('geburtstage.txt').read().split(',')
-print (List[0])
-print (List[1])
-print (List[2])
-print (List[3])
+fileName = open(birthdayFile, 'r') 
+today = time.strftime('%m%d') 
+flag = 0
+for line in fileName: 
+     if today in line: 
+        line = line.split(' ') 
+        flag = 1
+        print("Birthdays Today: " + line[1]) 
+    if flag == 0: 
+        print("No Birthdays Today!"') 
