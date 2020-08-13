@@ -96,27 +96,6 @@ except: #if entry is Null
     humiD1 = jsonobj2["feeds"][0]["field2"] #displays the field entry (e.g. null)
     last_entry_D1 = jsonobj2["feeds"][0]["created_at"] #same as in try
 
-# time conversion of last entry, check if its older than 6 minutes (indicates f.ex. emtpy battery of D1 sensor)    
-last_entry_D1_dt = parser.parse(last_entry_D1)   
-ZERO = timedelta(0)
-class UTC(tzinfo):
-  def utcoffset(self, dt):
-    return ZERO
-  def tzname(self, dt):
-    return "UTC"
-  def dst(self, dt):
-    return ZERO
-utc = UTC()
-delta = datetime.now(utc) - last_entry_D1_dt
-print (delta)
-sixminutes = timedelta(minutes=6)
-if delta < sixminutes:
-    print ('D1 status indicator: √')
-    d1_status_indicator = str('√')
-if delta > sixminutes:
-    print ('D1 status indicator: X')
-    d1_status_indicator = str('X')
- 
 #calculate deltaT and deltaH
 try:
     deltaT = round(float(tempPi1) - float(tempD1))
