@@ -10,7 +10,7 @@ print (Datum, Uhrzeit)
 #manual calendar, to not be reliant on google api
 fileName = open("/home/pi/script/waveshareEpaper/script/geburtstage.txt", 'r') 
 today = time.strftime('%d.%m')
-tomorrow = today + timedelta(days=1)  
+tomorrow = datetime.now() + timedelta(days=1)  
 print (tomorrow)
 flag = 0
 for line in fileName: 
