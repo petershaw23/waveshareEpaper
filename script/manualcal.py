@@ -7,5 +7,5 @@ for line in fileName:
         line = line.split(' ') 
         flag = 1
         print("Birthdays Today: " + line[1]) 
-     if flag == 0: 
-         print("No Birthdays Today!"') 
+    if flag == 0: 
+        print("No Birthdays Today!"') 
