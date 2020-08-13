@@ -17,14 +17,6 @@ in3days = in3daysRaw.strftime('%d.%m')
 in4daysRaw = datetime.now() + timedelta(days=4)
 in4days = in4daysRaw.strftime('%d.%m') 
 
-geb = " "
-gebToday = " "
-gebTomorrow = " "
-gebin2days = " "
-gebin3days = " "
-gebin4days = " "
-countdown = " "  
-
 count = 0
 
 for line in fileName: 
@@ -55,7 +47,6 @@ for line in fileName:
         print("Birthday in 4 days: " + geb)
         count +=1
         
-print (count)
 
 
    
