@@ -29,22 +29,26 @@ for line in fileName:
     if tomorrow in line and count == 0:
         line = line.split(' ')
         geb = line[1]
-        print("Birthday Tomorrow: " + geb)
+        countdown = "mrgn: "
+        print(str(countdown) + str(geb))
         count +=1
     if in2days in line and count == 0:
         line = line.split(' ')
         geb = line[1]
-        print("Birthday in 2 days: " + geb)
+        countdown = "t-2: "
+        print(str(countdown) + str(geb))
         count +=1
     if in3days in line and count == 0:
         line = line.split(' ')
         geb = line[1]
-        print("Birthday in 3 days: " + geb)
+        countdown = "t-3: "
+        print(str(countdown) + str(geb))
         count +=1
     if in4days in line and count == 0:
         line = line.split(' ')
         geb = line[1]
-        print("Birthday in 4 days: " + geb)
+        countdown = "t-4: "
+        print(str(countdown) + str(geb))
         count +=1
         
 
