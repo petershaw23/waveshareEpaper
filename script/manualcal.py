@@ -8,7 +8,7 @@ print (Datum, Uhrzeit)
 
 
 List = open('geburtstage.txt').read().split(',')
+print (List[0])
 print (List[1])
 print (List[2])
 print (List[3])
-print (List[4])
