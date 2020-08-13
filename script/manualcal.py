@@ -36,23 +36,23 @@ for line in fileName:
         count +=1
     if tomorrow in line and count == 0:
         line = line.split(' ')
-        gebTomorrow = line[1]
-        print("Birthday Tomorrow: " + gebTomorrow)
+        geb = line[1]
+        print("Birthday Tomorrow: " + geb)
         count +=1
     if in2days in line and count == 0:
         line = line.split(' ')
-        gebin2days = line[1]
-        print("Birthday in 2 days: " + gebin2days)
+        geb = line[1]
+        print("Birthday in 2 days: " + geb)
         count +=1
     if in3days in line and count == 0:
         line = line.split(' ')
-        gebin3days = line[1]
-        print("Birthday in 3 days: " + gebin3days)
+        geb = line[1]
+        print("Birthday in 3 days: " + geb)
         count +=1
     if in4days in line and count == 0:
         line = line.split(' ')
-        gebin4days = line[1]
-        print("Birthday in 4 days: " + gebin4days)
+        geb = line[1]
+        print("Birthday in 4 days: " + geb)
         count +=1
         
 print (count)
