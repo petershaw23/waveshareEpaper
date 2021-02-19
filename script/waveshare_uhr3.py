@@ -126,6 +126,7 @@ print (trackIDString)
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 107) # font for time
 fontXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 32) # font for date
 fontL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 28) # font for bday1
+fontL2 = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 30) # font for new temps
 fontM = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 24) # font for volumio track ID
 fontS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 21) # font for bday2
 fontXS = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 17) # font for temp, humi, cpu_temp
@@ -154,7 +155,7 @@ def main():
         draw.line((0, 125, 264, 125), fill = 0)
         draw.text((120, 80), str(t),font = fontXS, fill = 0)             #cpu temp   
         #draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
-        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontXL, fill = 0)       #temps
+        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontL2, fill = 0)       #temps
         
 
         #Update display
