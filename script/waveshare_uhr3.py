@@ -155,7 +155,7 @@ def main():
         draw.line((0, 125, 264, 125), fill = 0)
         draw.text((120, 80), str(t),font = fontXS, fill = 0)             #cpu temp   
         #draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
-        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontL2, fill = 0)       #temps
+        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('% o:')+str(tempD1)+'°|'+str(humiD1), font = fontL2, fill = 0)       #temps
         
 
         #Update display
