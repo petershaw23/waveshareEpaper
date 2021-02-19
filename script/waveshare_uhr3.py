@@ -146,15 +146,15 @@ def main():
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         #draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
-        draw.text((0, -7), str(Datum)+str(' ')+str(countdown)+str(geb), font = fontXL, fill = 0)              # Date + next bday
-        draw.line((5, 26, 259, 26), fill = 0)
+        draw.text((0, -4), str(Datum)+str(' ')+str(countdown)+str(geb), font = fontXL, fill = 0)              # Date + next bday
+        draw.line((5, 33, 259, 33), fill = 0)
         #draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time alte version unter track ID
-        draw.text((-4, 20), Uhrzeit, font = fontXXL, fill = 0)
-        draw.line((0, 125, 264, 138), fill = 0)
+        draw.text((-4, 16), Uhrzeit, font = fontXXL, fill = 0)
+        draw.line((0, 125, 264, 125), fill = 0)
         draw.text((120, 80), str(t),font = fontXS, fill = 0)             #cpu temp   
         #draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
-        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontL, fill = 0)       #temps
+        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontXL, fill = 0)       #temps
         
 
         #Update display
