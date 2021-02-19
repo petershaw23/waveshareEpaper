@@ -145,20 +145,16 @@ def main():
         
         
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
-        draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
+        #draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -7), str(Datum)+str(' ')+str(countdown)+str(geb), font = fontXL, fill = 0)              # Date + next bday
-        #draw.text((75, -6), gebStringNext, font = fontL, fill = 0)     # bday1 old version, different size than date
-        draw.line((5, 26, 259, 26), fill = 0)
-        #### draw.text((0, 23), gebStringUeberNext, font = fontS, fill = 0) #bday2
-        #draw.line((0, 48, 264, 48), fill = 0) # black line below bday 2
-        #draw.arc((70, 90, 120, 140), 0, 360, fill = 0)
-        #draw.chord((70, 150, 120, 200), 0, 360, fill = 0)
-        draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
-        #draw.line((0, 77, 264, 77), fill = 0)
-        draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time
-        draw.line((0, 160, 264, 160), fill = 0)
-        draw.text((120, 110), str(t),font = fontXS, fill = 0)             #cpu temp   
-        draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps
+        draw.line((5, 26, 259, 26), fill = 0))
+        #draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
+        #draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time alte version unter track ID
+        draw.text((-4, 40), Uhrzeit, font = fontXXL, fill = 0)
+        draw.line((0, 147, 264, 147), fill = 0)
+        draw.text((120, 88), str(t),font = fontXS, fill = 0)             #cpu temp   
+        draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
+        draw.text((0, 140), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontM, fill = 0)       #temps
         
 
         #Update display
