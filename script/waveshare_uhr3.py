@@ -151,10 +151,10 @@ def main():
         #draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time alte version unter track ID
         draw.text((-4, 20), Uhrzeit, font = fontXXL, fill = 0)
-        draw.line((0, 138, 264, 138), fill = 0)
-        draw.text((120, 88), str(t),font = fontXS, fill = 0)             #cpu temp   
-        draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
-        draw.text((0, 140), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontM, fill = 0)       #temps
+        draw.line((0, 125, 264, 138), fill = 0)
+        draw.text((120, 80), str(t),font = fontXS, fill = 0)             #cpu temp   
+        #draw.text((0, 159), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1)+str('%  Δt:' )+str(deltaT)+str('°|ΔH:' )+str(deltaH)+str('%'), font = fontXS, fill = 0)       #temps alte version bei nutzung der Track ID
+        draw.text((0, 130), 'i:'+str(tempPi1)+'°|'+str(humiPi1)+str('%  o:')+str(tempD1)+'°|'+str(humiD1), font = fontL, fill = 0)       #temps
         
 
         #Update display
