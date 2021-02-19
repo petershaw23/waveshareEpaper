@@ -147,7 +147,7 @@ def main():
         #draw.rectangle((0, 0, 264, 49), fill = 0) #rectangle behind bdays and date
         #draw.rectangle((0, 48, 264, 71), fill = 0) #rectangle behind track ID
         draw.text((0, -7), str(Datum)+str(' ')+str(countdown)+str(geb), font = fontXL, fill = 0)              # Date + next bday
-        draw.line((5, 26, 259, 26), fill = 0))
+        draw.line((5, 26, 259, 26), fill = 0)
         #draw.text((0, 45), trackIDString, font = fontM, fill = 1)       # volumio track ID
         #draw.text((-4, 53), Uhrzeit, font = fontXXL, fill = 0)           # time alte version unter track ID
         draw.text((-4, 40), Uhrzeit, font = fontXXL, fill = 0)
