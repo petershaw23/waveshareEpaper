@@ -1,7 +1,7 @@
 # waveshareEpaper
 
 ### multi purpose script for waveshare 2.7 inch black/white
-short write up on https://michaelbudjan.de/en/2019/07/diy-e-paper-display-with-raspberry-pi-zero-waveshare-e-paper-hat/
+short write up on https://peter-shaw.de/en/2019/07/diy-e-paper-display-with-raspberry-pi-zero-waveshare-e-paper-hat/
 
 
 ## implemented functions:
