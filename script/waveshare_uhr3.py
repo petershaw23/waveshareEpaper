@@ -45,22 +45,19 @@ def get_cpu_temp():
         return round(float(f.readline()) / 1000)
 
 
-def get_thingspeak_temp_humi(url, humi_fallback=50):
-    """Holt Temperatur (+ Platzhalter-Luftfeuchte) von einem ThingSpeak-Channel.
-    Gibt bei Netzwerkfehlern "--"/"--" zurueck, damit das Display trotzdem laeuft."""
+def get_thingspeak_temp(url):
+    """Holt die Temperatur von einem ThingSpeak-Channel.
+    Gibt bei Netzwerkfehlern "--" zurueck, damit das Display trotzdem laeuft."""
     try:
         data = requests.get(url, timeout=REQUEST_TIMEOUT).json()
         feed = data["feeds"][0]
     except (requests.RequestException, KeyError, IndexError, ValueError):
-        return "--", "--"
+        return "--"
 
     try:
-        temp = round(float(feed["field2"]))
-        humi = humi_fallback
+        return round(float(feed["field2"]))
     except (TypeError, ValueError):
-        temp = feed.get("field1")
-        humi = feed.get("field2")
-    return temp, humi
+        return "--"
 
 
 def get_delta(a, b):
@@ -78,16 +75,14 @@ def main():
     countdown, geb = get_naechster_geburtstag(BDAY_FILE)
     cpu_temp = get_cpu_temp()
 
-    temp_innen, humi_innen = get_thingspeak_temp_humi(CHANNELS["innen"])
-    temp_aussen, humi_aussen = get_thingspeak_temp_humi(CHANNELS["aussen"])
+    temp_innen = get_thingspeak_temp(CHANNELS["innen"])
+    temp_aussen = get_thingspeak_temp(CHANNELS["aussen"])
 
     delta_t = get_delta(temp_innen, temp_aussen)
-    delta_h = get_delta(humi_innen, humi_aussen)
 
     print(f"{datum} {uhrzeit}")
     print(f"{countdown}{geb}")
-    print(f"{cpu_temp}°C in: {temp_innen}°C {humi_innen}% "
-          f"out: {temp_aussen}°C {humi_aussen}% Δt: {delta_t}°C ΔH: {delta_h}")
+    print(f"{cpu_temp}°C in: {temp_innen}°C out: {temp_aussen}°C Δt: {delta_t}°C")
 
     # Schriftarten
     font_xxl = ImageFont.truetype(FONT, 107)  # Uhrzeit
@@ -109,7 +104,7 @@ def main():
     text(-4, 16, uhrzeit, font_xxl)
     draw.line((0, 125, 264, 125), fill=0)
     text(120, 80, cpu_temp, font_xs)
-    text(0, 130, f"i:{temp_innen}°|{humi_innen}% o:{temp_aussen}°|{humi_aussen}", font_l2)
+    text(0, 130, f"i:{temp_innen}° o:{temp_aussen}°", font_l2)
 
     epd.display(epd.getbuffer(image))
     epd.sleep()
