@@ -79,17 +79,18 @@ t = round(float(traw) / 1000)
 
 # temperatur und humidity von thingspeak channel holen
 # pi1 data
-data1 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
+data1 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
 jsonobj1 = json.loads(data1.content.decode('utf-8'))
-tempPi1 = round(float(jsonobj1["feeds"][0]["field3"]))
-humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
-
+tempPi1 = round(float(jsonobj1["feeds"][0]["field2"]))
+#humiPi1 = round(float(jsonobj1["feeds"][0]["field5"]))
+humiPi1 = 50
 # d1 mini data
-data2 = requests.get(url="https://api.thingspeak.com/channels/843073/feeds.json?results=1")
+data2 = requests.get(url="https://api.thingspeak.com/channels/647418/feeds.json?results=1")
 jsonobj2 = json.loads(data2.content.decode('utf-8'))
 try:
-    tempD1 = round(float(jsonobj2["feeds"][0]["field1"]))
-    humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
+    tempD1 = round(float(jsonobj2["feeds"][0]["field2"]))
+    #humiD1 = round(float(jsonobj2["feeds"][0]["field2"]))
+    humiD1 = 50
     last_entry_D1 = jsonobj2["feeds"][0]["created_at"] #time of last entry
 except: #if entry is Null
     tempD1 = jsonobj2["feeds"][0]["field1"] #displays the field entry (e.g. null)
@@ -107,20 +108,20 @@ print (str(t)+'°C   in: '+str(tempPi1)+'°C  '+str(humiPi1)+str('%    out: ')+s
     
 # track ID via volumio REST api holen:
 
-trackid = subprocess.Popen("curl 192.168.0.164/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
-(outputRAW, error) = trackid.communicate()
-if trackid.returncode != 0: #if offline
-   artist = ' '
-   trackname = ' '
+#trackid = subprocess.Popen("curl 192.168.0.164/api/v1/getstate", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+#(outputRAW, error) = trackid.communicate()
+#if trackid.returncode != 0: #if offline
+#   artist = ' '
+#   trackname = ' '
    #trackIDString = '        Volumio Offline' # placeholder for test 
-   trackIDString = '- - - - - - - - - - - - - - - - - - - - -'
-else:
-   trackname = outputRAW.decode().split('\"')[9]
-   artist = outputRAW.decode().split('\"')[13]
-   trackIDString = (str(artist)+str(' - ')+str(trackname))
+ #  trackIDString = '- - - - - - - - - - - - - - - - - - - - -'
+#else:
+#   trackname = outputRAW.decode().split('\"')[9]
+#   artist = outputRAW.decode().split('\"')[13]
+#   trackIDString = (str(artist)+str(' - ')+str(trackname))
    #albumart = outputRAW.decode().split('\"')[21] #das waere sau cool
 
-print (trackIDString)
+#print (trackIDString)
 ######################################################################################################
 #schriftarten definieren
 fontXXL = ImageFont.truetype('/home/pi/script/waveshareEpaper/lib/Font.ttc', 107) # font for time
