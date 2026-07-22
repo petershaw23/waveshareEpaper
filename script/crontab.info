@@ -1,0 +1,11 @@
+
+#write this to crontab -e
+
+@reboot python3 /home/pi/script/waveshareEpaper/script/button.py > /home/pi/button.log 2>&1 &
+
+* 7-9 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
+0 10 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
+
+* 17-21 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
+0 22 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
+
