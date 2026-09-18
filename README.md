@@ -7,42 +7,22 @@ short write up on https://peter-shaw.de/en/2019/07/diy-e-paper-display-with-rasp
 ## implemented functions:
 - pi temperature
 - data from thingspeak channel
-- track ID from volumio REST API (= multi room audio player, in the same network)
-- calendar entries from google calendar API
+- calendar entries (see calendar.txt)
 - date and time :)
 
 ## python scripts: 
 
 - waveshare_uhr2.py: handles the main functions
-- gcallite.py: handles google calendar API
 - buttons.py: handles the 4 display buttons (switch wifi power outlets on/off)
 
 
-## display layout (webcam pic):
-
-![alt text](https://peter-shaw.de/waveshare.jpg "layout")
-
-
-## google calendar api 
-api needs to be authed via browser at the first run. use "exec.sh" to run via cronjob (correct enviroment settings). 
-
-## email alert
-implemented an email alert (sendmail.py)
-
 ## cronjob looks like this:
 <code>crontab -e</code><br>
-<code>  GNU nano 5.4                                             /tmp/crontab.frDudf/crontab                                                      
+<code>
 @reboot python3 /home/pi/script/waveshareEpaper/script/button.py > /home/pi/button.log 2>&1 &
-
 * 7-8 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
 0 9 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
-
 * 17-21 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
 0 22 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
-
-
-
 </code>
 
-## to-do
-- maps.py: google maps API, outputs time till next train is coming
