@@ -31,7 +31,18 @@ implemented an email alert (sendmail.py)
 
 ## cronjob looks like this:
 <code>crontab -e</code><br>
-<code>* * * * * /home/pi/script/waveshareEpaper/script/exec.sh >> /home/pi/script/waveshareEpaper/clocklog2.txt 2>&1</code>
+<code>  GNU nano 5.4                                             /tmp/crontab.frDudf/crontab                                                      
+@reboot python3 /home/pi/script/waveshareEpaper/script/button.py > /home/pi/button.log 2>&1 &
+
+* 7-8 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
+0 9 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
+
+* 17-21 * * * python3 /home/pi/script/waveshareEpaper/script/waveshare_uhr3.py > /dev/null 2>&1
+0 22 * * * python3 /home/pi/script/waveshareEpaper/script/clean.py > /home/pi/clean.log 2>&1
+
+
+
+</code>
 
 ## to-do
 - maps.py: google maps API, outputs time till next train is coming
