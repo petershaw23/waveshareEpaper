@@ -2,6 +2,8 @@
 # -*- coding:utf-8 -*-
 # uhr v3 (vereinfacht & robuster) by petershaw23 - zeigt Zeit, Datum, anstehenden
 # Geburtstag, CPU-Temperatur sowie Temperatur/Luftfeuchte via ThingSpeak
+import os
+os.makedirs("/tmp/uhr-web", exist_ok=True)
 
 import sys
 from datetime import datetime, timedelta
@@ -23,7 +25,37 @@ CHANNELS = {
 }
 
 REQUEST_TIMEOUT = 5  # Sekunden
+import subprocess
+import re
 
+def get_uptime():
+    with open("/proc/uptime") as f:
+        seconds = int(float(f.read().split()[0]))
+
+    days = seconds // 86400
+    hours = (seconds % 86400) // 3600
+
+    if days:
+        return f"{days}d {hours}h"
+    else:
+        return f"{hours}h"
+        
+def get_ping():
+    try:
+        result = subprocess.check_output(
+            ["ping", "-c", "1", "-W", "5", "1.1.1.1"],
+            stderr=subprocess.DEVNULL,
+            text=True
+        )
+
+        match = re.search(r"time[=<]([\d.]+)", result)
+        if match:
+            return f"{float(match.group(1)):.0f}ms"
+
+    except:
+        pass
+
+    return "--"
 
 def get_naechster_geburtstag(pfad):
     """Sucht die naechsten 0-4 Tage in geburtstage.txt nach einem Treffer."""
@@ -68,6 +100,8 @@ def get_delta(a, b):
 
 
 def main():
+    ping = get_ping()
+    uptime = get_uptime()
     now = datetime.now()
     datum = now.strftime('%-d.%-m.')
     uhrzeit = now.strftime('%H:%M')
@@ -88,7 +122,7 @@ def main():
     font_xxl = ImageFont.truetype(FONT, 107)  # Uhrzeit
     font_xl = ImageFont.truetype(FONT, 32)    # Datum
     font_xs = ImageFont.truetype(FONT, 17)    # CPU-Temp
-    font_l2 = ImageFont.truetype(FONT, 29)    # Temp/Humi
+    font_l2 = ImageFont.truetype(FONT, 32)    # Temp/Humi
 
     epd = epd2in7.EPD()
     epd.init()
@@ -105,7 +139,14 @@ def main():
     draw.line((0, 125, 264, 125), fill=0)
     text(120, 80, cpu_temp, font_xs)
     text(0, 130, f"i:{temp_innen}° o:{temp_aussen}°", font_l2)
-
+    
+     # unten rechts: Ping + Uptime
+    status = f"{ping} {uptime}"
+    bbox = draw.textbbox((0, 0), status, font=font_xs)
+    status_width = bbox[2] - bbox[0]
+    text(264 - status_width - 4, 141, status, font_xs)
+    
+    image.save("/tmp/uhr-web/uhr.png")
     epd.display(epd.getbuffer(image))
     epd.sleep()
 
